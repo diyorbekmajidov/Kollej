@@ -1,7 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-   
+{% extends 'base.html' %}
+{%block content %} 
+{%block link%}
+       
     <!--====== Required meta tags ======-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -43,9 +43,10 @@
     
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
-  
-  
-</head>
+{%endblock link%}
+
+{% load static %}
+{% comment %} <html lang="en"> {% endcomment %}
 
 <body>
    
@@ -1267,4 +1268,4 @@
     <script src="js/map-script.js"></script>
 
 </body>
-</html>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    {%block link %} 
+    
+    {% endblock link%}
+</head>
+<body>
+    <header>
+        <!-- Navbar yoki boshqa umumiy elementlar -->
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Sahifaga xos kontent -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Footer -->
+    </footer>
+
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>
