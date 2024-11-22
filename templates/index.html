@@ -1,52 +1,7 @@
 {% extends 'base.html' %}
 {%block content %} 
-{%block link%}
-       
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!--====== Title ======-->
-    <title>Edubin - LMS Education HTML Template</title>
-    
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="css/slick.css">
-
-    <!--====== Animate css ======-->
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <!--====== Nice Select css ======-->
-    <link rel="stylesheet" href="css/nice-select.css">
-    
-    <!--====== Nice Number css ======-->
-    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
-
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-    <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="css/default.css">
-    
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!--====== Responsive css ======-->
-    <link rel="stylesheet" href="css/responsive.css">
-{%endblock link%}
-
 {% load static %}
-{% comment %} <html lang="en"> {% endcomment %}
+<link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
 
 <body>
    
@@ -97,7 +52,7 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="logo">
                             <a href="index-2.html">
-                                <img src="images/logo.png" alt="Logo">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -105,7 +60,7 @@
                         <div class="support-button float-right d-none d-md-block">
                             <div class="support float-left">
                                 <div class="icon">
-                                    <img src="images/all-icon/support.png" alt="icon">
+                                    <img src="{% static 'assets/images/all-icon/support.png' %}" alt="icon">
                                 </div>
                                 <div class="cont">
                                     <p>Need Help? call us free</p>
@@ -227,7 +182,8 @@
     <!--====== SLIDER PART START ======-->
     
     <section id="slider-part" class="slider-active">
-        <div class="single-slider bg_cover pt-150" style="background-image: url(images/slider/s-1.jpg)" data-overlay="4">
+        <div class="single-slider bg_cover pt-150" style="background-image: url('{% static "assets/images/slider/s-1.jpg" %}');" data-overlay="4">
+
             <div class="container">
                 <div class="row">
                     <div class="col-xl-7 col-lg-9">
@@ -298,7 +254,7 @@
                                 <a href="#">
                                     <span class="singel-category text-center color-1">
                                         <span class="icon">
-                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                            <img src="{% static 'assets/images/all-icon/ctg-1.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
                                             <span>Language</span>
@@ -310,7 +266,7 @@
                                 <a href="#">
                                     <span class="singel-category text-center color-2">
                                         <span class="icon">
-                                            <img src="images/all-icon/ctg-2.png" alt="Icon">
+                                            <img src="{% static 'assets/images/all-icon/ctg-2.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
                                             <span>Business</span>
@@ -322,7 +278,7 @@
                                 <a href="#">
                                     <span class="singel-category text-center color-3">
                                         <span class="icon">
-                                            <img src="images/all-icon/ctg-3.png" alt="Icon">
+                                            <img src="{% static 'assets/images/all-icon/ctg-3.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
                                             <span>Literature</span>
@@ -334,7 +290,7 @@
                                 <a href="#">
                                     <span class="singel-category text-center color-1">
                                         <span class="icon">
-                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                            <img src="assets/images/all-icon/ctg-1.png" alt="Icon">
                                         </span>
                                         <span class="cont">
                                             <span>Language</span>
@@ -346,7 +302,7 @@
                                 <a href="#">
                                     <span class="singel-category text-center color-2">
                                         <span class="icon">
-                                            <img src="images/all-icon/ctg-2.png" alt="Icon">
+                                            <img src="assets/images/all-icon/ctg-2.png" alt="Icon">
                                         </span>
                                         <span class="cont">
                                             <span>Business</span>
@@ -426,7 +382,7 @@
             </div> <!-- row -->
         </div> <!-- container -->
         <div class="about-bg">
-            <img src="images/about/bg-1.png" alt="About">
+            <img src="{% static 'assets/images/about/bg-1.png' %}" alt="About">
         </div>
     </section>
     
@@ -476,7 +432,7 @@
                     <div class="singel-course">
                         <div class="thum">
                             <div class="image">
-                                <img src="images/course/cu-1.jpg" alt="Course">
+                                <img src="{% static 'assets/images/course/cu-1.jpg' %}" alt="Course">
                             </div>
                             <div class="price">
                                 <span>Free</span>
@@ -494,7 +450,7 @@
                             <a href="courses-singel.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="#"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a>
+                                    <a href="#"><img src="{% static 'assets/images/course/teacher/t-1.jpg' %}" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -1219,53 +1175,7 @@
     
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
     
-    <!--====== BACK TO TP PART ENDS ======-->
-   
-    
-    
-    
-    
-    
-    
-    
-    <!--====== jquery js ======-->
-    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="js/bootstrap.min.js"></script>
-    
-    <!--====== Slick js ======-->
-    <script src="js/slick.min.js"></script>
-    
-    <!--====== Magnific Popup js ======-->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    
-    <!--====== Counter Up js ======-->
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    
-    <!--====== Nice Select js ======-->
-    <script src="js/jquery.nice-select.min.js"></script>
-    
-    <!--====== Nice Number js ======-->
-    <script src="js/jquery.nice-number.min.js"></script>
-    
-    <!--====== Count Down js ======-->
-    <script src="js/jquery.countdown.min.js"></script>
-    
-    <!--====== Validator js ======-->
-    <script src="js/validator.min.js"></script>
-    
-    <!--====== Ajax Contact js ======-->
-    <script src="js/ajax-contact.js"></script>
-    
-    <!--====== Main js ======-->
-    <script src="js/main.js"></script>
-    
-    <!--====== Map js ======-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
-    <script src="js/map-script.js"></script>
+    <!--====== BACK TO TP PART ENDS ======--> 
 
 </body>
 {% endblock %}

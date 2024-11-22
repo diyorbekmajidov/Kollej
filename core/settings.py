@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kollej_app', # my app
-    'rest_framework', #rest framework
+    'rest_framework', #rest framework,
+    'ckeditor' # for ckeditor
 ]
 
 MIDDLEWARE = [
@@ -124,6 +125,7 @@ MEDIA_URL = '/media/'    # Media fayllar uchun URL prefiksi
 # Static fayllar uchun sozlamalar
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Development muhitida ishlatiladi
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')   # Production muhitida collectstatic yig‘adi
+CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 # Media fayllar uchun sozlamalar
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Media fayllarning saqlanish joyi
