@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'kollej_app', # my app
     'rest_framework', #rest framework,
-    'ckeditor' # for ckeditor
+    'django_ckeditor_5' # for ckeditor
 ]
 
 MIDDLEWARE = [
