@@ -4,7 +4,7 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Website{% endblock %}</title>
+    <title>{% block title %}SAMARQAND QURILISh SOHASI MALAKALI MUTAXASSISLARNI TAYYORLASh MARKAZI xush kelibsiz {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!--====== Slick css ======-->
     <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
@@ -41,7 +41,133 @@
 </head>
 <body>
     <header>
-        <!-- Navbar yoki boshqa umumiy elementlar -->
+           <!--====== PRELOADER PART START ======-->
+    
+    <div class="preloader">
+        <div class="loader rubix-cube">
+            <div class="layer layer-1"></div>
+            <div class="layer layer-2"></div>
+            <div class="layer layer-3 color-1"></div>
+            <div class="layer layer-4"></div>
+            <div class="layer layer-5"></div>
+            <div class="layer layer-6"></div>
+            <div class="layer layer-7"></div>
+            <div class="layer layer-8"></div>
+        </div>
+    </div>
+    
+    <!--====== PRELOADER PART START ======-->
+    
+    <!--====== HEADER PART START ======-->
+    
+    <header id="header-part">
+        <div class="header-top d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header-contact text-lg-left text-center">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <img src="{% static 'assets/images/all-icon/email.png' %}" alt="icon">
+                                    <span>info@yourmail.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header-opening-time text-lg-right text-center">
+                            <p style="font-size: 18px; font-weight: bold;">Bog'lanish uchun: +998997444367</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="navigation">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <!-- Logotip -->
+                    <a class="navbar-brand" href="/{{LANGUAGE_CODE}}">
+                        <img src="{% static 'assets/images/logo4.png' %}" alt="Logo" class="img-fluid" style="max-height: 120px;">
+                    </a>
+                    <!-- Toggler button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Menyu va Sub-menyu -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto" style="font-size: 18px; font-weight: bold; text-transform: uppercase;">
+                            <!-- Home -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Home
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="homeDropdown" style="font-size: 16px; background: #f8f9fa;">
+                                    <a class="dropdown-item" href="index-2.html">Home 01</a>
+                                    <a class="dropdown-item" href="index-3.html">Home 02</a>
+                                    <a class="dropdown-item" href="index-4.html">Home 03</a>
+                                </div>
+                            </li>
+                            <!-- About -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About us</a>
+                            </li>
+                            <!-- Courses -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Courses
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="coursesDropdown" style="font-size: 16px; background: #f8f9fa;">
+                                    <a class="dropdown-item" href="courses.html">Courses</a>
+                                    <a class="dropdown-item" href="courses-singel.html">Course Single</a>
+                                </div>
+                            </li>
+                            <!-- Events -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="events.html">Events</a>
+                            </li>
+                            <!-- Teachers -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="teachers.html">Our Teachers</a>
+                            </li>
+                            <!-- Blog -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <!-- Shop -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop.html">Shop</a>
+                            </li>
+                            <!-- Contact -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+
+    
+    <!--====== HEADER PART ENDS ======-->
+   
+    <!--====== SEARCH BOX PART START ======-->
+    
+    <div class="search-box">
+        <div class="serach-form">
+            <div class="closebtn">
+                <span></span>
+                <span></span>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="Search by keyword">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div> <!-- serach form -->
+        <!--====== SEARCH BOX PART ENDS ======-->
+    </div>
     </header>
 
     <main>
