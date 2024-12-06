@@ -29,7 +29,7 @@ class Leadership(models.Model):
 class News(models.Model):
     NEW_METHODS = [
         ("1", 'news'),
-        ('2', 'events')
+        ("2", 'events')
     ]
 
     new_type = models.CharField(

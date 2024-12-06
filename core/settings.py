@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'kollej_app', # my app
     'rest_framework', #rest framework,
-    'django_ckeditor_5' # for ckeditor
+    'ckeditor' # for ckeditor
 ]
 
 MIDDLEWARE = [
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates/')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,6 +70,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
@@ -119,16 +120,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'  # Static fayllar uchun URL prefiksi
-MEDIA_URL = '/media/'    # Media fayllar uchun URL prefiksi
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# Static fayllar uchun sozlamalar
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Development muhitida ishlatiladi
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')   # Production muhitida collectstatic yig‘adi
+# For media files (for CKEditor image uploads)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 # Media fayllar uchun sozlamalar
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Media fayllarning saqlanish joyi
 
 
 # Default primary key field type
