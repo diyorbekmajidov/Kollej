@@ -20,7 +20,7 @@ class Index(TemplateView):
 
 
 def NewsView(request):
-    object_all = News.objects.filter(new_type="news")
+    object_all = News.objects.filter(new_type=1)
     page_num = request.GET.get('page', 1)
 
     paginator = Paginator(object_all, 9) 
@@ -35,7 +35,7 @@ def NewsView(request):
     return render(request, 'news.html', {'page_obj': page_obj})
 
 def EventView(request):
-    object_all = News.objects.filter(new_type="events")
+    object_all = News.objects.filter(new_type=2)
     page_num = request.GET.get('page', 1)
 
     paginator = Paginator(object_all, 9) 
