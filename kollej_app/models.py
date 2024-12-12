@@ -90,6 +90,9 @@ class OpenData(models.Model):
     def __str__(self):
         return self.name
     
+    class Meta:
+        verbose_name = "Ochiq ma'lumotlar"
+    
 
 class Directions(models.Model):
     name = models.CharField(max_length=120, verbose_name="Yo'nalish nomi")
@@ -103,5 +106,5 @@ class Directions(models.Model):
         return self.name
     
     class Meta:
-        verbose_name = "Ochiq malumotlar"
+        verbose_name = "Yo'nalishlar"
     

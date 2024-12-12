@@ -6,15 +6,16 @@ from django.views.generic import TemplateView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from rest_framework.response import Response
 
-# Create your views here.
 
 class Index(TemplateView):
     def get(self, request):
         news = News.objects.order_by("-date_created")[:4]
         event = News.objects.filter(new_type=2)[:4]
+        directions = Directions.objects.all()
         context = {
             "news": news,
-            "events":event
+            "events":event,
+            "directions":directions
         }
         return render(request, 'index.html', context)
 
@@ -54,3 +55,20 @@ def NewById(request, pk):
     newsbyid = News.objects.get(id=pk)
     context = {"newsbyid":newsbyid}
     return render(request, 'news-single.html', context)
+
+def Directions(request, pk):
+    if pk is None:
+
+        directions = Directions.objects.all()
+        context = {"directions":directions}
+        return render(request, '.html', context) #this code return all directions
+    
+    direction = Directions.objects.get(pk)
+    context_id = {"directionby_id":direction}
+    return  render(request, '.html', context_id) #this code return by id directions
+
+class Requisitesview(TemplateView):
+    def get(self, request):
+        requisites = Requisites.objects.last()
+        serializers = RequisitesSerializers(requisites)
+        return render(request, '.html',{"data":serializers.data})
