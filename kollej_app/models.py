@@ -86,6 +86,7 @@ class OpenData(models.Model):
 class Directions(models.Model):
     name = models.CharField(max_length=120, verbose_name="Yo'nalish nomi")
     body = RichTextUploadingField(verbose_name="Yo'nalish matni")
+    image = models.ImageField(upload_to='img/', validators=[validate_file_size])
     
     date_created = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
