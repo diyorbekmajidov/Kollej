@@ -24,6 +24,9 @@ class Leadership(models.Model):
 
     def __str__(self):
         return self.full_name
+    
+    class Meta:
+        verbose_name = "Rahbarlar"
 
 
 class News(models.Model):
@@ -46,6 +49,8 @@ class News(models.Model):
     
     def __str__(self):
         return self.title
+    class Meta:
+        verbose_name = "Yangiliklar va e'lonlar"
     
 
 class Requisites(models.Model):
@@ -64,6 +69,9 @@ class Requisites(models.Model):
 
     def __str__(self):
         return self.college_name
+    # Rekvizitlar
+    class Meta:
+        verbose_name = "Rekvizitlar"
 
 class OpenData(models.Model):
 
@@ -93,4 +101,7 @@ class Directions(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = "Ochiq malumotlar"
     

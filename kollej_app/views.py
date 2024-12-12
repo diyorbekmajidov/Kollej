@@ -20,8 +20,9 @@ class Index(TemplateView):
 
 
 def NewsView(request):
-    object_all = News.objects.filter(new_type=1)
+    object_all = News.objects.filter(new_type="1").order_by('-date_created')
     page_num = request.GET.get('page', 1)
+    print(object_all.count())
 
     paginator = Paginator(object_all, 9) 
 
@@ -31,8 +32,10 @@ def NewsView(request):
         page_obj = paginator.page(1)
     except EmptyPage:
         page_obj = paginator.page(paginator.num_pages)
+    
+    return HttpResponse({'page_obj': page_obj})
 
-    return render(request, 'news.html', {'page_obj': page_obj})
+    # return render(request, 'news.html', {'page_obj': page_obj})
 
 def EventView(request):
     object_all = News.objects.filter(new_type=2)
