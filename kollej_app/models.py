@@ -94,7 +94,7 @@ class OpenData(models.Model):
         verbose_name = "Ochiq ma'lumotlar"
     
 
-class Directions(models.Model):
+class DirectionsModel(models.Model):
     name = models.CharField(max_length=120, verbose_name="Yo'nalish nomi")
     body = RichTextUploadingField(verbose_name="Yo'nalish matni")
     image = models.ImageField(upload_to='img/', validators=[validate_file_size])

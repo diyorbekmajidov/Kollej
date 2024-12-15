@@ -11,7 +11,7 @@ class Index(TemplateView):
     def get(self, request):
         news = News.objects.order_by("-date_created")[:4]
         event = News.objects.filter(new_type=2)[:4]
-        directions = Directions.objects.all()
+        directions = DirectionsModel.objects.all()
         context = {
             "news": news,
             "events":event,

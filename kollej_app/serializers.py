@@ -25,5 +25,5 @@ class OpenDataSerializers(serializers.ModelSerializer):
 
 class DirectionsSerializers(serializers.ModelSerializer):
     class Meta:
-        models = Directions
+        models = DirectionsModel
         fields = "__all__"
