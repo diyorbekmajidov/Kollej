@@ -42,6 +42,9 @@ class News(models.Model):
     body          = RichTextUploadingField(verbose_name='Yangilik matni')
     views         = models.IntegerField(default=0, verbose_name="ko'rishlar soni")
     title         = models.CharField(max_length=255, verbose_name="Sarlavha")
+    # def __str__(self):
+    #     return self.image
+    
 
 
     date_created = models.DateField(auto_now_add=True)

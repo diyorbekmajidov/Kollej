@@ -57,18 +57,17 @@ def NewById(request, pk):
     return render(request, 'news-single.html', context)
 
 def Directions(request, pk):
-    if pk is None:
+    if not pk:
 
-        directions = Directions.objects.all()
+        directions = DirectionsModel.objects.all()
         context = {"directions":directions}
         return render(request, '.html', context) #this code return all directions
-    
-    direction = Directions.objects.get(pk)
+    direction = DirectionsModel.objects.get(pk=pk)
     context_id = {"directionby_id":direction}
-    return  render(request, '.html', context_id) #this code return by id directions
+    return  render(request, 'directions-single.html', context_id) #this code return by id directions
 
 class Requisitesview(TemplateView):
     def get(self, request):
         requisites = Requisites.objects.last()
         serializers = RequisitesSerializers(requisites)
-        return render(request, '.html',{"data":serializers.data})
+        return render(request, 'contact.html',{"data":serializers.data})
