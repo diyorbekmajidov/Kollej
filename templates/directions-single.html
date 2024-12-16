@@ -30,11 +30,11 @@
         <div class="container">
             <div class="events-area">
                         <div class="events-left">
-                            <h3>{{newsbyid.title}}</h3>
-                            <span><i class="fa fa-eye"></i> {{newsbyid.views}} </span> <br/>
-                            {% comment %} {{newsbyid}} {% endcomment %}
-                            <img src="/media/{{ newsbyid.image }}/" style="max-height: 30rem;" alt="Event">
-                            <p>{{newsbyid.body|safe}}</p>
+                            <h3>{{directionby_id.name}}</h3>
+                            <span><i class="text-secondary fa fa-clock-o"></i> {{directionby_id.date_created}} </span> <br/>
+                            {% comment %} {{directionby_id}} {% endcomment %}
+                            <img src="/media/{{ directionby_id.image }}/" style="max-height: 30rem;" alt="Event">
+                            <p>{{directionby_id.body|safe}}</p>
                         </div> <!-- events left -->
             </div> <!-- events-area -->
         </div> <!-- container -->
