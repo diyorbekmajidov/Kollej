@@ -54,14 +54,12 @@
 
                     {% for obj in page_obj %}
                     
-                            {{obj.title}}
-
                         <div class="singel-blog mt-30">
                             <div class="blog-thum">
-                                <img src="images/blog/b-1.jpg" alt="Blog">
+                                <img src="/media/{{obj.image}}" alt="Blog">
                             </div>
                             <div class="blog-cont">
-                                <a href="blog-singel.html"><h3>Few tips for get better results in examination</h3></a>
+                                <a href="/yangilik/{{obj.pk}}/{{LANGUAGE_CODE}}"><h3> {{obj.title}}</h3></a>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a></li>
                                     <li><a href="#"><i class="fa fa-user"></i>Mark anthem</a></li>
@@ -75,26 +73,42 @@
                     {% endfor %}
 
 
-                   <nav class="courses-pagination mt-50">
+                    <nav class="courses-pagination mt-50">
                         <ul class="pagination justify-content-lg-end justify-content-center">
+                            <!-- Previous Page -->
+                            {% if page_obj.has_previous %}
                             <li class="page-item">
-                                <a href="#" aria-label="Previous">
+                                <a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
                                     <i class="fa fa-angle-left"></i>
                                 </a>
                             </li>
-                            <li class="page-item"><a class="active" href="#">1</a></li>
-                            <li class="page-item"><a href="#">2</a></li>
-                            <li class="page-item"><a href="#">3</a></li>
+                            
+                            {% endif %}
+                    
+                            <!-- Page Numbers -->
+                            {% for page in page_obj.paginator.page_range %}
+                                {% if page == page_obj.number %}
+                                <li class="page-item"><a class="active" href="#">{{ page }}</a></li>
+                                {% else %}
+                                <li class="page-item"><a href="?page={{ page }}">{{ page }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                    
+                            <!-- Next Page -->
+                            {% if page_obj.has_next %}
                             <li class="page-item">
-                                <a href="#" aria-label="Next">
+                                <a href="?page={{ page_obj.next_page_number }}" aria-label="Next">
                                     <i class="fa fa-angle-right"></i>
                                 </a>
                             </li>
+                            
+                            {% endif %}
                         </ul>
-                    </nav>  <!-- courses pagination -->
+                    </nav>
+                      <!-- courses pagination -->
                </div>
 
-               <div class="col-lg-4">
+               {% comment %} <div class="col-lg-4">
                    <div class="saidbar">
                        <div class="row">
                            <div class="col-lg-12 col-md-6">
@@ -166,124 +180,12 @@
                            </div>
                        </div> <!-- row -->
                    </div> <!-- saidbar -->
-               </div>
+               </div> {% endcomment %}
            </div> <!-- row -->
         </div> <!-- container -->
     </section>
     
     <!--====== BLOG PART ENDS ======-->
-   
-    <!--====== FOOTER PART START ======-->
-    
-    <footer id="footer-part">
-        <div class="footer-top pt-40 pb-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-about mt-40">
-                            <div class="logo">
-                                <a href="#"><img src="images/logo-2.png" alt="Logo"></a>
-                            </div>
-                            <p>Gravida nibh vel velit auctor aliquetn quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate.</p>
-                            <ul class="mt-20">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div> <!-- footer about -->
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer-link mt-40">
-                            <div class="footer-title pb-25">
-                                <h6>Sitemap</h6>
-                            </div>
-                            <ul>
-                                <li><a href="index-2.html"><i class="fa fa-angle-right"></i>Home</a></li>
-                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Courses</a></li>
-                                <li><a href="blog.html"><i class="fa fa-angle-right"></i>News</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right"></i>Event</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Gallery</a></li>
-                                <li><a href="shop.html"><i class="fa fa-angle-right"></i>Shop</a></li>
-                                <li><a href="teachers.html"><i class="fa fa-angle-right"></i>Teachers</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
-                            </ul>
-                        </div> <!-- footer link -->
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer-link support mt-40">
-                            <div class="footer-title pb-25">
-                                <h6>Support</h6>
-                            </div>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>FAQS</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Privacy</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Policy</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Documentation</a></li>
-                            </ul>
-                        </div> <!-- support -->
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-address mt-40">
-                            <div class="footer-title pb-25">
-                                <h6>Contact Us</h6>
-                            </div>
-                            <ul>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa fa-home"></i>
-                                    </div>
-                                    <div class="cont">
-                                        <p>143 castle road 517 district, kiyev port south Canada</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-                                    <div class="cont">
-                                        <p>+3 123 456 789</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa fa-envelope-o"></i>
-                                    </div>
-                                    <div class="cont">
-                                        <p>info@yourmail.com</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div> <!-- footer address -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- footer top -->
-        
-        <div class="footer-copyright pt-10 pb-25">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="copyright text-md-left text-center pt-15">
-                            <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="copyright text-md-right text-center pt-15">
-                           
-                        </div>
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- footer copyright -->
-    </footer>
-    
-    <!--====== FOOTER PART ENDS ======-->
    
     <!--====== BACK TO TOP PART START ======-->
     
