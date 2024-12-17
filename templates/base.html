@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}SAMARQAND QURILISh SOHASI MALAKALI MUTAXASSISLARNI TAYYORLASh MARKAZI xush kelibsiz {% endblock %}</title>
     <link rel="icon" href="{% static 'assets/images/logo4.png' %}" type="image/x-icon">
+
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!--====== Slick css ======-->
     <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
@@ -73,7 +74,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-envelope-fill" viewBox="0 0 16 16">
                                         <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                                       </svg>
-                                    <span> {% if website.email %} {{ website.email }} {% else %} hello@hello.uz {% endif %} </span>
+                                    <span> {% if website.email %} {{ website.email }} {% else %} samqurkoll@umail.uz {% endif %} </span>
                                 </li>
                             </ul>
                         </div>
@@ -86,7 +87,7 @@
                                 </svg>
                                 {% if website.phone %} <a class="text-light" href="tel:{{ website.phone }}">{{ website.phone }}</a> 
 
-                                {% else %} <a class="text-light" href="tel:+998997444367">+998997444367</a> {% endif %}
+                                {% else %} <a class="text-light" href="tel:++998662312324">+998 (66) 231 23 24</a> {% endif %}
 
                             </p>
                         </div>
@@ -173,8 +174,99 @@
         {% endblock %}
     </main>
 
-    <footer>
-        <!-- Footer -->
+    <footer id="footer-part">
+        <div class="footer-top pt-40 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-about mt-40">
+                            <div class="logo">
+                                <a href="/"><img width="100px" height="100px" src="{% static 'assets/images/logo4.png' %}" alt="Logo"></a>
+                            </div>
+                            <p>
+                                SAMARQAND QURILISH SOHASI MALAKALI MUTAXASSISLARNI TAYYORLASH MARKAZI
+                            </p>
+                            {% comment %} <ul class="mt-20">
+                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul> {% endcomment %}
+                        </div> <!-- footer about -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Sitemap</h6>
+                            </div>
+                            <ul>
+                                <li><a href="index-2.html"><i class="fa fa-angle-right"></i>Home</a></li>
+                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Courses</a></li>
+                                <li><a href="blog.html"><i class="fa fa-angle-right"></i>News</a></li>
+                                <li><a href="/events/{{LANGUAGE_CODE}}/"><i class="fa fa-angle-right"></i>Event</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Gallery</a></li>
+                                <li><a href="shop.html"><i class="fa fa-angle-right"></i>Shop</a></li>
+                                <li><a href="teachers.html"><i class="fa fa-angle-right"></i>Teachers</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
+                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-link support mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Support</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>FAQS</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Privacy</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Policy</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Documentation</a></li>
+                            </ul>
+                        </div> <!-- support -->
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-address mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Contact Us</h6>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>Kimyogarlar" MFY Irteshar GES ko'chasi 5-uy</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>+998 (66) 231 23 24</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>samqurkoll@umail.uz</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- footer address -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer top -->
+        
+
     </footer>
 
     <script src="{% static 'assets/js/main.js' %}"></script>
