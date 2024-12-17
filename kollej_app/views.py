@@ -71,3 +71,16 @@ class Requisitesview(TemplateView):
         requisites = Requisites.objects.last()
         serializers = RequisitesSerializers(requisites)
         return render(request, 'contact.html',{"data":serializers.data})
+    
+
+class Leadershipview(TemplateView):
+    def get(self, request):
+        leader = Leadership.objects.all()
+        serializers = LeadershipSerializers(leader, many=True)
+        return render(request, '.html', {"data":serializers.data})
+    
+class LibraryViews(TemplateView):
+    template_name = "library.html"
+
+class TtjViews(TemplateView):
+    template_name = "ttj.html"
