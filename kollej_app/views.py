@@ -77,7 +77,7 @@ class Leadershipview(TemplateView):
     def get(self, request):
         leader = Leadership.objects.all()
         serializers = LeadershipSerializers(leader, many=True)
-        return render(request, '.html', {"data":serializers.data})
+        return render(request, 'leadership.html', {"data":serializers.data})
     
 class LibraryViews(TemplateView):
     template_name = "library.html"
