@@ -52,9 +52,9 @@
                             {% for event in events|slice:":2" %}
                                 <li>
                                     <div class="singel-event">
-                                        <a href="/yangilik/{{event.pk}}/{{LANGUAGE_CODE}}"><h4> {{event.title}} </h4></a>
+                                        <a href="/yangilik/{{event.pk}}/{{LANGUAGE_CODE}}"><h4> {{event.title|slice:50}}... </h4></a>
                                         <p>
-                                            {{event.body|safe|slice:250}} <span class="text-secondary">...</span>
+                                            {{event.body|safe|slice:100}} <span class="text-secondary">...</span>
                                         </p>
                                         <span><i class="fa fa-eye"></i> {{event.views}}</span>
                                         <a href="/yangilik/{{event.pk}}/{{LANGUAGE_CODE}}" class="main-btn mt-55">To'liq o'qish</a>
