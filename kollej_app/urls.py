@@ -11,6 +11,6 @@ urlpatterns = [
     path('contact/', Requisitesview.as_view()),
     path('library/', LibraryViews.as_view()),
     path('ttj/', TtjViews.as_view()),
-    path('rahbariyat/', Leadershipview.as_view())
+    path('rahbariyat/', Leadershipview.as_view()),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
