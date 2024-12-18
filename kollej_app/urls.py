@@ -1,5 +1,5 @@
 from django.urls import path 
-from .views import Index, NewsView, EventView, NewById, Directions, Requisitesview,LibraryViews, TtjViews
+from .views import Index, NewsView, EventView, NewById, Directions, Requisitesview,LibraryViews, TtjViews,Leadershipview
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
@@ -11,5 +11,6 @@ urlpatterns = [
     path('contact/', Requisitesview.as_view()),
     path('library/', LibraryViews.as_view()),
     path('ttj/', TtjViews.as_view()),
+    path('rahbariyat/', Leadershipview.as_view())
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
