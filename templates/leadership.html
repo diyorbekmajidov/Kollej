@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %} 
+{% load static %}
+
+<section id="teachers-page" class="pt-90 pb-120 gray-bg">
+    <div class="container">
+       <div class="row">
+           
+        {% for i in data %}
+
+        <div class="col-lg-3 col-sm-6">
+            <div class="singel-teachers mt-30 text-center">
+                 <div class="image">
+                     <img src="{{i.image}}" alt="Teachers">
+                 </div>
+                 <div class="cont">
+                     <a href="#"><h6>{{i.full_name}}</h6></a>
+                     <span>{{i.position}}</span>
+                 </div>
+             </div> <!-- singel teachers -->
+        </div>
+
+        {% endfor %}
+           
+       </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+
+{%endblock%}
