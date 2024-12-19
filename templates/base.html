@@ -137,6 +137,17 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/contact/{{LANGUAGE_CODE}}">Bog'lanish</a>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="directions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Talabalar hayoti
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="directions" style="font-size: 16px; background: #f8f9fa;">
+                                    {% for d in directions %}
+                                        <a class="dropdown-item text-center" href="/directions/{{d.pk}}/{{LANGUAGE_CODE}}">{{d.name}}</a>
+                                    
+                                    {% endfor %}
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </nav>
