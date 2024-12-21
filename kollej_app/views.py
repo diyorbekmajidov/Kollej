@@ -56,6 +56,21 @@ def NewById(request, pk):
     context = {"newsbyid":newsbyid}
     return render(request, 'news-single.html', context)
 
+def Opendata(request):
+    open_data = Opendata.objects.filter(open_method = 1)
+    context = {"open_data":open_data}
+    return render(request, '.html', context)
+
+def Charter(request):
+    charter = OpenData.objects.filter(open_method = 2)
+    context = {"charter":charter}
+    return render(request, '.html', context)
+
+def DocumetById(request, pk):
+    documet = OpenData.objects.get(id=pk)
+    context = {"documentbyid":documet}
+    return render(request, '.html', context)
+
 def Directions(request, pk):
     if not pk:
 
