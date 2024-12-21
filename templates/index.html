@@ -38,8 +38,8 @@
                         <h4>SAMARQAND QURILISH SOHASI MALAKALI MUTAXASSISLARNI TAYYORLASH MARKAZI </h4>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p> SAMARQAND QURILISH KOLLEJI QOSHIDA Qurilish sohasi malakali mutaxassislarni tayyorlash markazi  ham faoliyat yuritmoqda qisqa muddatli kurs boʻlib shuni ham qoʻshing vediorolik va rasmlarni tashladim
-                            <br> <br> auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris</p>
+                        <p> SAMARQAND QURILISH KOLLEJI QOSHIDA Qurilish sohasi malakali mutaxassislarni tayyorlash markazi ham faoliyat yuritmoqda qisqa muddatli kurs boʻlib.
+                            </p>
                         {% comment %} <a href="#" class="main-btn mt-55">Learn More</a> {% endcomment %}
                     </div>
                 </div> <!-- about cont -->
@@ -127,7 +127,6 @@
                             <div class="course-teacher">
                                 <div class="admin">
                                     <ul>
-                                        <li><i class="text-secondary fa fa-clock-o"></i> <span class="text-secondary">{{i.date_created}}</span></li>
                                         {% comment %} <li><a href="#"><i class="fa fa-heart"></i><span>{{i.date_updated}}</span></a></li> {% endcomment %}
                                     </ul>
                                 </div>
@@ -443,7 +442,6 @@
                             <div class="news-cont">
                                 <ul>
                                     <li><a href="#"><i class="fa fa-calendar"></i> {{ item.date_created|date:"d F Y" }}</a></li>
-                                    <li><a href="#"><span>By</span> {{ item.author }}</a></li>
                                 </ul>
                                 <a href="/yangilik/{{item.pk}}/{{LANGUAGE_CODE}}"><h3>{{ item.title }}</h3></a>
                             </div>

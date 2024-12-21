@@ -25,7 +25,7 @@ def NewsView(request):
     page_num = request.GET.get('page', 1)
     print(object_all.count())
 
-    paginator = Paginator(object_all, 9) 
+    paginator = Paginator(object_all, 5) 
 
     try:
         page_obj = paginator.page(page_num)
@@ -40,7 +40,7 @@ def EventView(request):
     object_all = News.objects.filter(new_type=2)
     page_num = request.GET.get('page', 1)
 
-    paginator = Paginator(object_all, 9) 
+    paginator = Paginator(object_all, 5) 
 
     try:
         page_obj = paginator.page(page_num)
@@ -49,7 +49,7 @@ def EventView(request):
     except EmptyPage:
         page_obj = paginator.page(paginator.num_pages)
 
-    return render(request, 'evets.html', {'page_obj': page_obj})
+    return render(request, 'events.html', {'page_obj': page_obj})
 
 def NewById(request, pk):
     newsbyid = News.objects.get(id=pk)

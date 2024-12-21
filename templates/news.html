@@ -45,9 +45,8 @@
                             <div class="blog-cont">
                                 <a href="/yangilik/{{obj.pk}}/{{LANGUAGE_CODE}}"><h3> {{obj.title}}</h3></a>
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a></li>
-                                    <li><a href="#"><i class="fa fa-user"></i>Mark anthem</a></li>
-                                    <li><a href="#"><i class="fa fa-tags"></i>Education</a></li>
+                                    <li class="text-secondary"><i class="fa fa-eye"></i> {{obj.views}}</li>
+                                    <li class="text-secondary"><i class="fa fa-clock-o "></i> {{obj.date_created|date:"d F Y" }}</li>
                                 </ul>
                                 <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
                             </div>
