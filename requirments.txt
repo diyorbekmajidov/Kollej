@@ -3,3 +3,4 @@ requests
 djangorestframework
 Pillow
 django-ckeditor-5
+django-modeltranslation
