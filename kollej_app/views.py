@@ -57,14 +57,14 @@ def NewById(request, pk):
     return render(request, 'news-single.html', context)
 
 def Opendata(request):
-    open_data = Opendata.objects.filter(open_method = 1)
+    open_data = OpenData.objects.filter(open_method = 1)
     context = {"open_data":open_data}
-    return render(request, '.html', context)
+    return render(request, 'open-data.html', context)
 
 def Charter(request):
     charter = OpenData.objects.filter(open_method = 2)
     context = {"charter":charter}
-    return render(request, '.html', context)
+    return render(request, 'charter.html', context)
 
 def DocumetById(request, pk):
     documet = OpenData.objects.get(id=pk)

@@ -29,13 +29,28 @@
     <section id="event-singel" class="pt-120 pb-120 gray-bg">
         <div class="container">
             <div class="events-area">
-                        <div class="events-left">
-                            <h3>{{directionby_id.name}}</h3>
-                            <span><i class="text-secondary fa fa-clock-o"></i> {{directionby_id.date_created}} </span> <br/>
-                            {% comment %} {{directionby_id}} {% endcomment %}
-                            <img src="/media/{{ directionby_id.image }}/" style="max-height: 30rem;" alt="Event">
-                            <p>{{directionby_id.body|safe}}</p>
-                        </div> <!-- events left -->
+                <h3>Nizom</h3>
+            
+                <br />
+
+                <ul class="list-group list-group-flush">
+                    {% for item in charter %}
+                        <li class="list-group-item d-flex justify-content-between">
+                            <div>
+                                {{item}}
+                                <span class="badge rounded-pill bg-warning">{{item.date_created|date:"d F Y"}}</span>
+                            </div>
+                            <div>
+                                <a href="/media/{{item.pdf_file}}" target="_blank">
+                                    <span class="btn bg-warning">
+                                        <i class="text-light fa fa-download" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                        
             </div> <!-- events-area -->
         </div> <!-- container -->
     </section>

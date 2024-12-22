@@ -120,17 +120,19 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Talabalar hayoti
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="coursesDropdown" style="font-size: 16px; background: #f8f9fa;">
-                                    <a class="dropdown-item text-center" href="/library/{{LANGUAGE_CODE}}">Kutubxona</a>
-                                    <a class="dropdown-item text-center" href="/ttj/{{LANGUAGE_CODE}}">Yotoqxona</a>
+                                <div class="dropdown-menu" aria-labelledby="coursesDropdown" style="font-size: 10px; background: #f8f9fa;">
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/library/{{LANGUAGE_CODE}}">Kutubxona</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/ttj/{{LANGUAGE_CODE}}">Yotoqxona</a>
                                 </div>
                             </li>
-                            <!-- Events -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="/yangiliklar/{{LANGUAGE_CODE}}">Yangiliklar</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/events/{{LANGUAGE_CODE}}">Hodisalar</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Yangiliklar
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="coursesDropdown2" style="font-size: 10px; background: #f8f9fa;">
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/yangiliklar/">Yangiliklar</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/events/">E'lonlar</a>
+                                </div>
                             </li>
                             <!-- Teachers -->
                             <li class="nav-item">
@@ -141,12 +143,21 @@
                                 <a class="nav-link" href="/contact/{{LANGUAGE_CODE}}">Bog'lanish</a>
                             </li>
                             <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ochiq ma'lumotlar
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="coursesDropdown2" style="font-size: 10px; background: #f8f9fa;">
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/opendata/">Ochiq ma'lumotlar</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/charter/">Nizom</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="directions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Yo'nalishlar
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="directions" style="font-size: 16px; background: #f8f9fa;">
+                                <div class="dropdown-menu" aria-labelledby="directions" style="font-size: 10px; background: #f8f9fa;">
                                     {% for d in directions %}
-                                        <a class="dropdown-item text-center" href="/directions/{{d.pk}}/{{LANGUAGE_CODE}}">{{d.name}}</a>
+                                        <a class="dropdown-item text-center" style="font-size: 11px;" href="/directions/{{d.pk}}/{{LANGUAGE_CODE}}"> {{d.name|slice:15}}... </a>
                                     
                                     {% endfor %}
                                 </div>
