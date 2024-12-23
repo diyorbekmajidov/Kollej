@@ -41,12 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'kollej_app', # my app
     'rest_framework', #rest framework,
-    'ckeditor' # for ckeditor
+    'ckeditor', # for ckeditor
+    "corsheaders", #cors header
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware", #cors middleware
     'django.middleware.common.CommonMiddleware',
     'django.middleware.locale.LocaleMiddleware', #new
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -56,6 +58,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
+CORS_ALLOWED_ORIGINS = ["http://localhost:8080",]
 
 TEMPLATES = [
     {

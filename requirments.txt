@@ -4,3 +4,4 @@ djangorestframework
 Pillow
 django-ckeditor-5
 django-modeltranslation
+django-cors-headers
