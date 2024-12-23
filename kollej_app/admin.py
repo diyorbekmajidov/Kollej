@@ -2,6 +2,12 @@ from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
 from .models import *
 
+
+admin.site.register(Petitions)
+
+@admin.register(RegularlyQuestion)
+class RegularlyQuestionAdmin(TranslationAdmin):
+    list_display= ("question",)
 @admin.register(Leadership)
 class LeadershipAdmin(TranslationAdmin):
     list_display = ("full_name",)

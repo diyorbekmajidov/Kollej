@@ -110,4 +110,36 @@ class DirectionsModel(models.Model):
     
     class Meta:
         verbose_name = "Yo'nalishlar"
+
     
+
+class RegularlyQuestion(models.Model):
+    question = models.CharField(max_length=225, verbose_name='savol')
+    answer = models.CharField(max_length=500, verbose_name='javob')
+
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_update = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.question
+    
+    class Meta:
+        verbose_name = "Tez-tez so'raladigan savollar"
+    
+
+class Petitions(models.Model):
+    full_name = models.CharField(max_length=72, verbose_name="to'liq ism")
+    body = RichTextUploadingField()
+    phone_number = models.CharField(max_length=72)
+    topic = models.CharField(max_length=72, verbose_name='mavzu')
+    email = models.EmailField(("emial"), max_length=254)
+
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_update = models.DateTimeField(auto_now=True)
+
+
+    def __str__(self):
+        return self.full_name
+    
+    class Meta:
+        verbose_name = "Murojjatlar"

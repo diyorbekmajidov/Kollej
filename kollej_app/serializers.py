@@ -20,10 +20,15 @@ class RequisitesSerializers(serializers.ModelSerializer):
 
 class OpenDataSerializers(serializers.ModelSerializer):
     class Meta:
-        models = OpenData
+        model = OpenData
         fields = "__all__"
 
 class DirectionsSerializers(serializers.ModelSerializer):
     class Meta:
-        models = DirectionsModel
+        model = DirectionsModel
+        fields = "__all__"
+
+class PetitionSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Petitions
         fields = "__all__"

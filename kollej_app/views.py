@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from rest_framework.response import Response
+from rest_framework import status
 
 
 class Index(TemplateView):
@@ -12,10 +13,12 @@ class Index(TemplateView):
         news = News.objects.order_by("-date_created")[:4]
         event = News.objects.filter(new_type=2)[:4]
         directions = DirectionsModel.objects.all()
+        regularlyquestion = RegularlyQuestion.objects.all()
         context = {
             "news": news,
             "events":event,
-            "directions":directions
+            "directions":directions,
+            "questions":regularlyquestion
         }
         return render(request, 'index.html', context)
 
@@ -94,6 +97,14 @@ class Leadershipview(TemplateView):
         serializers = LeadershipSerializers(leader, many=True)
         return render(request, 'leadership.html', {"data":serializers.data})
     
+
+class PetitionsView(APIView):
+    def post(self, request):
+        serializers = PetitionSerializers(data=request.data)
+        if serializers.is_valid():
+            serializers.save()
+            return Response(serializers.data, status=status.HTTP_201_CREATED)
+        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
 class LibraryViews(TemplateView):
     template_name = "library.html"
 

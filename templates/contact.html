@@ -24,168 +24,106 @@
     
     <!--====== CONTACT PART START ======-->
     
-    <section id="contact-page" class="pt-90 pb-120 gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="contact-from mt-30">
-                        <div class="section-title">
-                            <h5>Bog'lanish</h5>
-                            <h2>Aloqada bo'lish</h2>
-                        </div> <!-- section title -->
-                        <div class="main-form pt-45">
-                            <form id="contact-form" action="#" method="post" data-toggle="validator">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="singel-form form-group">
-                                            <input name="name" type="text" placeholder="Ismingiz" data-error="Name is required." required="required">
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form -->
+    <section>
+        <div class="preloader">
+            <div class="loader rubix-cube">
+                <div class="layer layer-1"></div>
+                <div class="layer layer-2"></div>
+                <div class="layer layer-3 color-1"></div>
+            </div>
+        </div>
+        
+        <section id="contact-page" class="pt-90 pb-120 gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="contact-from mt-30">
+                            <div class="section-title">
+                                <h5>Bog'lanish</h5>
+                                <h2>Aloqada bo'lish</h2>
+                            </div>
+                            <div class="main-form pt-45">
+                                <form id="contact-form" action="{% url 'submit_petition' %}" method="post" data-toggle="validator">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="singel-form form-group">
+                                                <input name="full_name" type="text" placeholder="Ismingiz" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="singel-form form-group">
+                                                <input name="email" type="email" placeholder="Elektron pochta" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="singel-form form-group">
+                                                <input name="topic" type="text" placeholder="Mavzu" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="singel-form form-group">
+                                                <input name="phone_number" type="text" placeholder="Telefon raqam" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="singel-form form-group">
+                                                <textarea name="body" placeholder="Xabar" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="singel-form">
+                                                <button type="submit" class="main-btn">Yuborish</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="singel-form form-group">
-                                            <input name="email" type="email" placeholder="Elektron pochta" data-error="Valid email is required." required="required">
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="contact-address mt-30">
+                            <ul>
+                                <li>
+                                    <div class="singel-address">
+                                        <div class="icon">
+                                            <i class="fa fa-home"></i>
+                                        </div>
+                                        <div class="cont">
+                                            <p>Kimyogarlar" MFY Irteshar GES ko'chasi 5-uy</p>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="singel-form form-group">
-                                            <input name="subject" type="text" placeholder="Mavzu" data-error="Subject is required." required="required">
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form --> 
+                                </li>
+                                <li>
+                                    <div class="singel-address">
+                                        <div class="icon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <div class="cont">
+                                            <p> +998 (66) 231 23 24</p>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="singel-form form-group">
-                                            <input name="phone" type="text" placeholder="Telefon raqam" data-error="Phone is required." required="required">
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form -->
+                                </li>
+                                <li>
+                                    <div class="singel-address">
+                                        <div class="icon">
+                                            <i class="fa fa-envelope-o"></i>
+                                        </div>
+                                        <div class="cont">
+                                            <p>samqurkoll@umail.uz</p>
+                                        </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="singel-form form-group">
-                                            <textarea name="messege" placeholder="Xabar" data-error="Please,leave us a message." required="required"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form -->
-                                    </div>
-                                    <p class="form-message"></p>
-                                    <div class="col-md-12">
-                                        <div class="singel-form">
-                                            <button type="submit" class="main-btn">Yuborish</button>
-                                        </div> <!-- singel form -->
-                                    </div> 
-                                </div> <!-- row -->
-                            </form>
-                        </div> <!-- main form -->
-                    </div> <!--  contact from -->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="map mt-30">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d639.6837530799608!2d66.85461762073903!3d39.65907830584256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suz!2s!4v1734327882613!5m2!1suz!2s" style="width:100%;height:300px;border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="contact-address mt-30">
-                        <ul>
-                            <li>
-                                <div class="singel-address">
-                                    <div class="icon">
-                                        <i class="fa fa-home"></i>
-                                    </div>
-                                    <div class="cont">
-                                        <p>Kimyogarlar" MFY Irteshar GES ko'chasi 5-uy</p>
-                                    </div>
-                                </div> <!-- singel address -->
-                            </li>
-                            <li>
-                                <div class="singel-address">
-                                    <div class="icon">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-                                    <div class="cont">
-                                        <p> +998 (66) 231 23 24</p>
-                                    </div>
-                                </div> <!-- singel address -->
-                            </li>
-                            <li>
-                                <div class="singel-address">
-                                    <div class="icon">
-                                        <i class="fa fa-envelope-o"></i>
-                                    </div>
-                                    <div class="cont">
-                                        <p>samqurkoll@umail.uz</p>
-                                    </div>
-                                </div> <!-- singel address -->
-                            </li>
-                            <li>
-                                <div class="col-md-6">
-                                    <h5>Fax: <br /><span class="text-secondary">devonxona@uzfi.uz</span><br /> <br /></h5> 
-                                    <h5>Hisob raqami: <br /><span class="text-secondary">100010860184017094100350001</span><br /> <br /></h5> 
-                                    <h5>Bank: <br /><span class="text-secondary">+998954108015</span><br /> <br /></h5> 
-                                    <h5>MFO: <br /><span class="text-secondary">Markaziy bank bosh boshqarmasi</span><br /> <br /></h5> 
-                                    <h5>Shx/r: <br /><span class="text-secondary">00014</span><br /> <br /></h5> 
-                                    <h5>INN: <br /><span class="text-secondary">308769405</span><br /> <br /></h5> 
-                                    <h5>OKONX: <br /><span class="text-secondary">85420</span><br /> <br /></h5>
-                                </div>
-                            </li>
-                        </ul>
-                    </div> <!-- contact address -->
-                    <div class="map mt-30" >
-                        {% comment %} <div id="contact-map"></div> {% endcomment %}
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d639.6837530799608!2d66.85461762073903!3d39.65907830584256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suz!2s!4v1734327882613!5m2!1suz!2s" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div> <!-- map -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
+            </div>
+        </section>
     </section>
     
-    <!--====== CONTACT PART ENDS ======-->
-   
-   
-    <!--====== BACK TO TOP PART START ======-->
-    
-    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-    
-    <!--====== BACK TO TOP PART ENDS ======-->
-    
-    
-    
-    
-    
-    
-    
-    <!--====== jquery js ======-->
-    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="js/bootstrap.min.js"></script>
-    
-    <!--====== Slick js ======-->
-    <script src="js/slick.min.js"></script>
-    
-    <!--====== Magnific Popup js ======-->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    
-    <!--====== Counter Up js ======-->
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    
-    <!--====== Nice Select js ======-->
-    <script src="js/jquery.nice-select.min.js"></script>
-    
-    <!--====== Nice Number js ======-->
-    <script src="js/jquery.nice-number.min.js"></script>
-    
-    <!--====== Count Down js ======-->
-    <script src="js/jquery.countdown.min.js"></script>
-    
-    <!--====== Validator js ======-->
-    <script src="js/validator.min.js"></script>
-    
-    <!--====== Ajax Contact js ======-->
-    <script src="js/ajax-contact.js"></script>
-    
-    <!--====== Main js ======-->
-    <script src="js/main.js"></script>
-    
-    <!--====== Map js ======-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
-    <script src="js/map-script.js"></script>
-
-</section>
 
 {% endblock content %}

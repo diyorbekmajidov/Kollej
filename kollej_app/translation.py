@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Leadership, DirectionsModel, OpenData,News, Requisites
+from .models import Leadership, DirectionsModel, OpenData,News, Requisites, RegularlyQuestion
 
 @register(Leadership)
 class LeadershipTranslationOptions(TranslationOptions):
@@ -20,3 +20,7 @@ class NewsTranslationOptions(TranslationOptions):
 @register(Requisites)
 class RequisitesTranslationOptions(TranslationOptions):
     fields = ('college_name','address')
+
+@register(RegularlyQuestion)
+class RegularlyQuestionTranslationOptions(TranslationOptions):
+    fields = ('question','answer')
