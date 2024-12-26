@@ -58,7 +58,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
-# CORS_ALLOWED_ORIGINS = ["http://sam3sonpolitexnikum.uz/",]
+CORS_ALLOWED_ORIGINS = ["http://sam3sonpolitexnikum.uz/",]
 
 TEMPLATES = [
     {
@@ -84,23 +84,23 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'kollej',
-#         'USER': 'kollej3',
-#         'PASSWORD': 'royid472',
-#         'HOST': 'localhost',
-#         'PORT': '',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'kollej',
+        'USER': 'kollej3',
+        'PASSWORD': 'royid472',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 
 # Password validation
