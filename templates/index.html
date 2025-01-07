@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {%block content %} 
+{% load i18n %}
 {% load static %}
 
 <div>
@@ -33,11 +34,13 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="section-title mt-50">
-                        <h5>Biz haqimizda</h5>
-                        <h4>Samarqand shahar 3-son politexnikumi</h4>
+                        <h5>{% blocktranslate %}Biz haqimizda{% endblocktranslate %}</h5>
+                        <h4>{% blocktranslate %}Samarqand shahar 3-son politexnikumi{% endblocktranslate %}</h4>
+                        <p>Current language: {{ LANGUAGE_CODE }}</p>
+
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p> Samarqand shahar 3-son politexnikumi Qurilish sohasi malakali mutaxassislarni tayyorlash markazi ham faoliyat yuritmoqda qisqa muddatli kurs boʻlib.
+                        <p> {% blocktranslate %}Samarqand shahar 3-son politexnikumi Qurilish sohasi malakali mutaxassislarni tayyorlash markazi ham faoliyat yuritmoqda qisqa muddatli kurs boʻlib.{% endblocktranslate %}
                             </p>
                         {% comment %} <a href="#" class="main-btn mt-55">Learn More</a> {% endcomment %}
                     </div>
@@ -45,7 +48,7 @@
                 <div class="col-lg-6 offset-lg-1">
                     <div class="about-event mt-50">
                         <div class="event-title">
-                            <h3>So'nggi hodisalar</h3>
+                            <h3>{% blocktranslate %}So'nggi hodisalar{% endblocktranslate %}</h3>
                         </div> <!-- event title -->
                         <ul>
                             {% for event in events|slice:":2" %}
@@ -56,7 +59,7 @@
                                             {{event.body|safe|slice:100}} <span class="text-secondary">...</span>
                                         </p>
                                         <span><i class="fa fa-eye"></i> {{event.views}}</span>
-                                        <a href="/yangilik/{{event.pk}}/{{LANGUAGE_CODE}}" class="main-btn mt-55">To'liq o'qish</a>
+                                        <a href="/yangilik/{{event.pk}}/{{LANGUAGE_CODE}}" class="main-btn mt-55">{% blocktranslate %}To'liq o'qish{% endblocktranslate %}</a>
                                     </div>
                                 </li>
                             {% endfor %}
@@ -108,7 +111,7 @@
                 <div class="col-lg-6">
                     <div class="section-title pb-45">
                         {% comment %} <h5>Yo'nalishlar</h5> {% endcomment %}
-                        <h2>Bizning yo'nalishlar </h2>
+                        <h2>{% blocktranslate %}Bizning yo'nalishlar{% endblocktranslate %} </h2>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -435,8 +438,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title pb-50">
-                        <h5>So'nggi xabarlar</h5>
-                        <h2>Yangiliklar</h2>
+                        <h5>{% blocktranslate %}So'nggi xabarlar{% endblocktranslate %}</h5>
+                        <h2>{% blocktranslate %}Yangiliklar{% endblocktranslate %}</h2>
                     </div>
                 </div>
             </div>
@@ -502,7 +505,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title pb-50">
-                    <h2>Tez-tez so'raladigan savollar</h2>
+                    <h2>{% blocktranslate %}Tez-tez so'raladigan savollar{% endblocktranslate %}</h2>
                 </div>
             </div>
         </div>

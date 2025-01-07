@@ -8,10 +8,11 @@ from django.views.i18n import set_language
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
-              + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\
-              +i18n_patterns(
-                path('i18n/', include('django.conf.urls.i18n')),
-                path('i18n/', set_language, name='set_language'),
-                path('', include('kollej_app.urls')),
-              )
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
+    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += i18n_patterns(
+    path('', include('kollej_app.urls')),
+    path('set_language/', set_language, name='set_language'),
+    path('rosetta/', include('rosetta.urls')),
+)

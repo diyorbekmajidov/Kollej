@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin', # django admin jazzmin stile
     'modeltranslation', #model translate uchun
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework', #rest framework,
     'ckeditor', # for ckeditor
     "corsheaders", #cors header
+    'rosetta', # for bloctranslation
 ]
 
 MIDDLEWARE = [
@@ -58,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
-CORS_ALLOWED_ORIGINS = ["http://sam3sonpolitexnikum.uz/",]
+# CORS_ALLOWED_ORIGINS = ["http://sam3sonpolitexnikum.uz/",]
 
 TEMPLATES = [
     {
@@ -84,23 +86,23 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kollej',
-        'USER': 'kollej3',
-        'PASSWORD': 'royid472',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'kollej',
+#         'USER': 'kollej3',
+#         'PASSWORD': 'royid472',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
@@ -125,18 +127,18 @@ from django.utils.translation import gettext_lazy as _
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'uz-us'
+LANGUAGE_CODE = 'uz'
 
 LANGUAGES = [
     ('uz', _('Uzbek')),
     ('en', _('English')),
     ('ru', _('Russian')),
 ]
+
 MODELTRANSLATION_LANGUAGES = ('uz', 'en', 'ru')
 TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
-
 USE_TZ = True
 
 LOCALE_PATHS = (

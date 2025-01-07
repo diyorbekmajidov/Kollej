@@ -1,10 +1,15 @@
+
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}SAMARQAND QURILISh SOHASI MALAKALI MUTAXASSISLARNI TAYYORLASh MARKAZI xush kelibsiz {% endblock %}</title>
+    <title>{% block title %}{% blocktranslate %}Samarqand shahar 3-son politexnikumi{% endblocktranslate %}{% endblock %}</title>
     <link rel="icon" href="{% static 'assets/images/logo4.png' %}" type="image/x-icon">
 
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
@@ -63,7 +68,7 @@
     <!--====== HEADER PART START ======-->
     
     <header id="header-part">
-        <div class="header-top d-none d-lg-block">
+        <div class="header-top">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -80,6 +85,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
+                        
                         <div class="header-opening-time text-lg-right text-center">
                             <p >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#fff" class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -97,11 +103,11 @@
         </div>
     
         <div class="navigation">
-            <div class="container">
+            <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Logotip -->
                     <a class="navbar-brand" href="/{{LANGUAGE_CODE}}">
-                        <img src="{% static 'assets/images/logo4.png' %}" alt="Logo" class="img-fluid" style="max-height: 50px;">
+                        <img src="{% static 'assets/images/logo4.png' %}" alt="Logo" class="img-fluid; ml-20" style="max-height: 50px;">
                     </a>
                     <!-- Toggler button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,51 +115,51 @@
                     </button>
                     <!-- Menyu va Sub-menyu -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto" style="font-size: 18px; font-weight: bold; text-transform: uppercase;">
+                        <ul class="navbar-nav ml-40" style="font-size: 18px; font-weight: bold; text-transform: uppercase;">
                             <!-- Home -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/{{LANGUAGE_CODE}}">Bosh sahifa</a>
+                                <a class="nav-link" href="/{{LANGUAGE_CODE}}">{% blocktranslate %}Bosh sahifa{% endblocktranslate %}</a>
                             </li>
                             
                             <!-- Courses -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Talabalar hayoti
+                                    {% blocktranslate %}Talabalar hayoti{% endblocktranslate %}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="coursesDropdown" style="font-size: 10px; background: #f8f9fa;">
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/library/{{LANGUAGE_CODE}}">Kutubxona</a>
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/ttj/{{LANGUAGE_CODE}}">Yotoqxona</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/library/{{LANGUAGE_CODE}}">{% blocktranslate %}Kutubxona{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/ttj/{{LANGUAGE_CODE}}">{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Yangiliklar
+                                    {% blocktranslate %}Yangiliklar{% endblocktranslate %}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="coursesDropdown2" style="font-size: 10px; background: #f8f9fa;">
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/yangiliklar/">Yangiliklar</a>
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/events/">E'lonlar</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/yangiliklar/">{% blocktranslate %}Yangiliklar{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/events/">{% blocktranslate %}E'lonlar{% endblocktranslate %}</a>
                                 </div>
                             </li>
                             <!-- Teachers -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/rahbariyat/{{LANGUAGE_CODE}}">Rahbariyat</a>
+                                <a class="nav-link" href="/rahbariyat/{{LANGUAGE_CODE}}">{% blocktranslate %}Rahbariyat{% endblocktranslate %}</a>
                             </li>
                             <!-- Contact -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/contact/{{LANGUAGE_CODE}}">Bog'lanish</a>
+                                <a class="nav-link" href="/contact/{{LANGUAGE_CODE}}">{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Ochiq ma'lumotlar
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="coursesDropdown2" style="font-size: 10px; background: #f8f9fa;">
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/opendata/">Ochiq ma'lumotlar</a>
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/charter/">Nizom</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/opendata/">{% blocktranslate %}Ochiq ma'lumotlar{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/charter/">{% blocktranslate %}Nizom{% endblocktranslate %}</a>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="directions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Yo'nalishlar
+                             <li class="nav-item dropdown">
+                               <a class="nav-link dropdown-toggle" href="#" id="directions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {% blocktranslate %}Yo'nalishlar{% endblocktranslate %}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="directions" style="font-size: 10px; background: #f8f9fa;">
                                     {% for d in directions %}
@@ -162,6 +168,27 @@
                                     {% endfor %}
                                 </div>
                             </li>
+
+                            <li class="nav-item">
+                                <div class="topbar-right; mt-15">
+                                    <ul>
+                                        <li>
+                                            <form action="{% url 'set_language' %}" method="post">
+                                                {% csrf_token %}
+                                                <input name="next" type="hidden" value="{{ request.path }}">
+                                                <select name="language" onchange="this.form.submit();">
+                                                    {% get_available_languages as LANGUAGES %}
+                                                    {% get_language_info_list for LANGUAGES as languages %}
+                                                    {% for language in languages %}
+                                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                                            {{ language.name_local }}
+                                                        </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </form>
+                                    </ul>
+                              </div>
+                             </li>
                         </ul>
                     </div>
                 </nav>
@@ -203,33 +230,27 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="/"><img width="100px" height="100px" src="{% static 'assets/images/logo4.png' %}" alt="Logo"></a>
+                                <a href="/"><img width="100px" height="200px" src="{% static 'assets/images/logo4.png' %}" alt="Logo"></a>
                             </div>
                             <p>
-                                SAMARQAND QURILISH SOHASI MALAKALI MUTAXASSISLARNI TAYYORLASH MARKAZI
+                                {% blocktranslate %}SAMARQAND QURILISH SOHASI MALAKALI MUTAXASSISLARNI TAYYORLASH MARKAZI{% endblocktranslate %}
                             </p>
-                            {% comment %} <ul class="mt-20">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul> {% endcomment %}
                         </div> <!-- footer about -->
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-link mt-40">
                             <div class="footer-title pb-25">
-                                <h6>Sayt xaritasi</h6>
+                                <h6>{% blocktranslate %}Sayt xaritasi{% endblocktranslate %}</h6>
                             </div>
                             <ul>
-                                <li><a href="/{{LANGUAGE_CODE}}"><i class="fa fa-angle-right"></i>Bosh sahifa</a></li>
-                                <li><a href="/yangiliklar/{{LANGUAGE_CODE}}"><i class="fa fa-angle-right"></i>Yangiliklar</a></li>
-                                <li><a href="/rahbariyat/{{LANGUAGE_CODE}}"><i class="fa fa-angle-right"></i>Rahbariyat</a></li>
-                                <li><a href="/contact/{{LANGUAGE_CODE}}"><i class="fa fa-angle-right"></i>Bog'lanish</a></li>
+                                <li><a href="/{{LANGUAGE_CODE}}"><i class="fa fa-angle-right"></i>{% blocktranslate %}Bosh sahifa{% endblocktranslate %}</a></li>
+                                <li><a href="/{{LANGUAGE_CODE}}/yangiliklar/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Yangiliklar{% endblocktranslate %}</a></li>
+                                <li><a href="/{{LANGUAGE_CODE}}/rahbariyat/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Rahbariyat{% endblocktranslate %}</a></li>
+                                <li><a href="/{{LANGUAGE_CODE}}/contact/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a></li>
                             </ul>
                             <ul>
-                                <li><a href="/library/{{LANGUAGE_CODE}}"><i class="fa fa-angle-right"></i>Kutubxona</a></li>
-                                <li><a href="/ttj/{{LANGUAGE_CODE}}"><i class="fa fa-angle-right"></i>Yotoqxona</a></li>
+                                <li><a href="/library/" id="st_txt><i class="fa fa-angle-right"></i>{% blocktranslate %}Kutubxona{% endblocktranslate %}</a></li>
+                                <li><a href="/{{LANGUAGE_CODE}}/ttj/" id="st_txt"><i class="fa fa-angle-right"></i>{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a></li>
                             </ul>
                         </div> <!-- footer link -->
                     </div>
@@ -245,7 +266,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>Kimyogarlar" MFY Irteshar GES ko'chasi 5-uy</p>
+                                        <p>{% blocktranslate %}Kimyogarlar" MFY Irteshar GES ko'chasi 5-uy{% endblocktranslate %}</p>
                                     </div>
                                 </li>
                                 <li>

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% block content %} 
 {% load static %}
 
@@ -15,9 +16,9 @@
                         <p class="card-text">{{item.position}}</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Qabul kunlari: {{item.acceptions}}</li>
-                        <li class="list-group-item">Telefon raqam: {{item.phone_number}}</li>
-                        <li class="list-group-item">Email: {{item.email}}</li>
+                        <li class="list-group-item">{% blocktranslate %}Qabul kunlari: {% endblocktranslate %}{{item.acceptions}}</li>
+                        <li class="list-group-item">{% blocktranslate %}Telefon raqam: {% endblocktranslate %}{{item.phone_number}}</li>
+                        <li class="list-group-item">{% blocktranslate %}Email: {% endblocktranslate %}{{item.email}}</li>
                         </ul>
                         
                     </div>
