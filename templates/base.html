@@ -127,7 +127,7 @@
                                     {% blocktranslate %}Talabalar hayoti{% endblocktranslate %}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="coursesDropdown" style="font-size: 10px; background: #f8f9fa;">
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/library/{{LANGUAGE_CODE}}">{% blocktranslate %}Kutubxona{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/library/">{% blocktranslate %}Kutubxona{% endblocktranslate %}</a>
                                     <a class="dropdown-item text-center" style="font-size: 11px;" href="/ttj/{{LANGUAGE_CODE}}">{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a>
                                 </div>
                             </li>
@@ -173,19 +173,22 @@
                                 <div class="topbar-right; mt-15">
                                     <ul>
                                         <li>
-                                            <form action="{% url 'set_language' %}" method="post">
-                                                {% csrf_token %}
-                                                <input name="next" type="hidden" value="{{ request.path }}">
-                                                <select name="language" onchange="this.form.submit();">
-                                                    {% get_available_languages as LANGUAGES %}
-                                                    {% get_language_info_list for LANGUAGES as languages %}
-                                                    {% for language in languages %}
-                                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                                                            {{ language.name_local }}
-                                                        </option>
-                                                    {% endfor %}
-                                                </select>
-                                            </form>
+                                            <select id="languageSwitcher" class="form-control" onchange="changeLanguage()">
+                                                {% get_current_language as LANGUAGE_CODE %}
+                                                {% get_available_languages as LANGUAGES %}
+                                                {% get_language_info_list for LANGUAGES as languages %}
+                                                {% for lang in languages %}
+                                                {% if lang.code == "uz" %}
+                                                    <option value="/{{ lang.code }}/" {% if lang.code == LANGUAGE_CODE %} selected {% endif %}>
+                                                        {{ lang.name_local }} <!-- Display language name in local format -->
+                                                    </option>
+                                                    {% else %}
+                                                    <option value="/{{ lang.code }}/" {% if lang.code == LANGUAGE_CODE %} selected {% endif %}>
+                                                      {{ lang.name_local }} <!-- Display language name in local format -->
+                                                  </option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
                                     </ul>
                               </div>
                              </li>
@@ -249,7 +252,7 @@
                                 <li><a href="/{{LANGUAGE_CODE}}/contact/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a></li>
                             </ul>
                             <ul>
-                                <li><a href="/library/" id="st_txt><i class="fa fa-angle-right"></i>{% blocktranslate %}Kutubxona{% endblocktranslate %}</a></li>
+                                <li><a href="/library" id="st_txt><i class="fa fa-angle-right"></i>{% blocktranslate %}Kutubxona{% endblocktranslate %}</a></li>
                                 <li><a href="/{{LANGUAGE_CODE}}/ttj/" id="st_txt"><i class="fa fa-angle-right"></i>{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a></li>
                             </ul>
                         </div> <!-- footer link -->
@@ -294,6 +297,12 @@
         
 
     </footer>
+    <script>
+        function changeLanguage() {
+            var selectedLanguage = document.getElementById("languageSwitcher").value;
+            window.location.href = selectedLanguage; // Redirect to the selected language URL
+        }
+     </script>
 
     <script src="{% static 'assets/js/main.js' %}"></script>
     <!-- Vendor Scripts -->

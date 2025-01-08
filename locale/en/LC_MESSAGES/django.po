@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-07 14:04+0500\n"
+"POT-Creation-Date: 2025-01-07 05:04-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: core/settings.py:133
+#: core/settings.py:130
 msgid "Uzbek"
 msgstr ""
 
-#: core/settings.py:134
+#: core/settings.py:131
 msgid "English"
 msgstr ""
 
-#: core/settings.py:135
+#: core/settings.py:132
 msgid "Russian"
 msgstr ""
 
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Samarqand shahar 3-son politexnikumi"
 msgstr ""
 
-#: templates/base.html:122 templates/base.html:249
+#: templates/base.html:122 templates/base.html:247
 msgid "Bosh sahifa"
 msgstr ""
 
@@ -42,16 +42,16 @@ msgstr ""
 msgid "Talabalar hayoti"
 msgstr ""
 
-#: templates/base.html:131 templates/base.html:255 templates/library.html:16
+#: templates/base.html:131 templates/base.html:253 templates/library.html:16
 msgid "Kutubxona"
 msgstr ""
 
-#: templates/base.html:132 templates/base.html:256
+#: templates/base.html:132 templates/base.html:254
 msgid "Yotoqxona"
 msgstr ""
 
-#: templates/base.html:137 templates/base.html:140 templates/base.html:250
-#: templates/index.html:447 templates/news.html:16
+#: templates/base.html:137 templates/base.html:140 templates/base.html:248
+#: templates/index.html:449 templates/news.html:16
 msgid "Yangiliklar"
 msgstr ""
 
@@ -59,11 +59,11 @@ msgstr ""
 msgid "E'lonlar"
 msgstr ""
 
-#: templates/base.html:146 templates/base.html:251
+#: templates/base.html:146 templates/base.html:249
 msgid "Rahbariyat"
 msgstr ""
 
-#: templates/base.html:150 templates/base.html:252 templates/contact.html:42
+#: templates/base.html:150 templates/base.html:250 templates/contact.html:42
 msgid "Bog'lanish"
 msgstr ""
 
@@ -79,15 +79,15 @@ msgstr ""
 msgid "Yo'nalishlar"
 msgstr ""
 
-#: templates/base.html:239
+#: templates/base.html:237
 msgid "SAMARQAND QURILISH SOHASI MALAKALI MUTAXASSISLARNI TAYYORLASH MARKAZI"
 msgstr ""
 
-#: templates/base.html:246
+#: templates/base.html:244
 msgid "Sayt xaritasi"
 msgstr ""
 
-#: templates/base.html:272 templates/contact.html:93
+#: templates/base.html:270 templates/contact.html:93
 msgid "Kimyogarlar\" MFY Irteshar GES ko'chasi 5-uy"
 msgstr ""
 
@@ -99,7 +99,7 @@ msgstr ""
 msgid "Yuborish"
 msgstr ""
 
-#: templates/events.html:16 templates/index.html:50
+#: templates/events.html:16 templates/index.html:52
 msgid "So'nggi hodisalar"
 msgstr ""
 
@@ -107,26 +107,26 @@ msgstr ""
 msgid "Biz haqimizda"
 msgstr ""
 
-#: templates/index.html:41
+#: templates/index.html:43
 msgid ""
 "Samarqand shahar 3-son politexnikumi Qurilish sohasi malakali "
 "mutaxassislarni tayyorlash markazi ham faoliyat yuritmoqda qisqa muddatli "
 "kurs boʻlib."
 msgstr ""
 
-#: templates/index.html:61
+#: templates/index.html:63
 msgid "To'liq o'qish"
 msgstr ""
 
-#: templates/index.html:115
+#: templates/index.html:117
 msgid "Bizning yo'nalishlar"
 msgstr ""
 
-#: templates/index.html:446
+#: templates/index.html:448
 msgid "So'nggi xabarlar"
 msgstr ""
 
-#: templates/index.html:513
+#: templates/index.html:515
 msgid "Tez-tez so'raladigan savollar"
 msgstr ""
 

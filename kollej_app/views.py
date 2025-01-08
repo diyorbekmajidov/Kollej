@@ -6,6 +6,12 @@ from django.views.generic import TemplateView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from rest_framework.response import Response
 from rest_framework import status
+from django.utils.translation import get_language
+
+def test_language_view(request):
+    current_language = get_language()
+    return HttpResponse(f"Current language is: {current_language}")
+
 
 
 class Index(TemplateView):

@@ -58,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+LANGUAGE_COOKIE_NAME = 'django_language'
 
 ROOT_URLCONF = 'core.urls'
 # CORS_ALLOWED_ORIGINS = ["http://sam3sonpolitexnikum.uz/",]
@@ -122,11 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 from django.utils.translation import gettext_lazy as _
-# Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
-
 LANGUAGE_CODE = 'uz'
 
 LANGUAGES = [
@@ -135,15 +132,14 @@ LANGUAGES = [
     ('ru', _('Russian')),
 ]
 
-MODELTRANSLATION_LANGUAGES = ('uz', 'en', 'ru')
-TIME_ZONE = 'Asia/Tashkent'
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 
 USE_I18N = True
+USE_L10N = True
 USE_TZ = True
-
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale'),
-)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

@@ -13,6 +13,5 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', include('kollej_app.urls')),
-    path('set_language/', set_language, name='set_language'),
     path('rosetta/', include('rosetta.urls')),
 )
