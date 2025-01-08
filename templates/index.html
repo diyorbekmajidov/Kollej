@@ -36,7 +36,6 @@
                     <div class="section-title mt-50">
                         <h5>{% blocktranslate %}Biz haqimizda{% endblocktranslate %}</h5>
                         <h4>{% blocktranslate %}Samarqand shahar 3-son politexnikumi{% endblocktranslate %}</h4>
-                        <p>Current language: {{ LANGUAGE_CODE }}</p>
 
                     </div> <!-- section title -->
                     <div class="about-cont">
@@ -54,12 +53,12 @@
                             {% for event in events|slice:":2" %}
                                 <li>
                                     <div class="singel-event">
-                                        <a href="/yangilik/{{event.pk}}/{{LANGUAGE_CODE}}"><h4> {{event.title|slice:50}}... </h4></a>
+                                        <a href="/yangilik/{{event.pk}}/"><h4> {{event.title|slice:50}}... </h4></a>
                                         <p>
                                             {{event.body|safe|slice:100}} <span class="text-secondary">...</span>
                                         </p>
                                         <span><i class="fa fa-eye"></i> {{event.views}}</span>
-                                        <a href="/yangilik/{{event.pk}}/{{LANGUAGE_CODE}}" class="main-btn mt-55">{% blocktranslate %}To'liq o'qish{% endblocktranslate %}</a>
+                                        <a href="/yangilik/{{event.pk}}/" class="main-btn mt-55">{% blocktranslate %}To'liq o'qish{% endblocktranslate %}</a>
                                     </div>
                                 </li>
                             {% endfor %}
@@ -125,7 +124,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="/directions/{{i.pk}}/{{LANGUAGE_CODE}}"><h4>{{i.name}}</h4></a>
+                            <a href="/directions/{{i.pk}}/"><h4>{{i.name}}</h4></a>
                             <div class="course-teacher">
                                 <div class="admin">
                                     <ul>
@@ -163,7 +162,7 @@
         padding-bottom: 56.25%; /* 16:9 format uchun */
         height: 0;
         overflow: hidden;
-        max-width: 100%;
+        max-width: 80%;
         margin: auto; /* Markazlashtirish uchun */
         background-color: #000; /* Video atrofida qora fon */
         border-radius: 10px; /* Yumaloq burchaklar */
@@ -456,9 +455,9 @@
                             </div>
                             <div class="news-cont">
                                 <ul>
-                                    <li><a href="/yangilik/{{news.0.pk}}/{{LANGUAGE_CODE}}"><i class="fa fa-calendar"></i> {{ news.0.date_created|date:"d F Y" }}</a></li>
+                                    <li><a href="/yangilik/{{news.0.pk}}/"><i class="fa fa-calendar"></i> {{ news.0.date_created|date:"d F Y" }}</a></li>
                                 </ul>
-                                <a href="/yangilik/{{news.0.pk}}/{{LANGUAGE_CODE}}"><h3>{{ news.0.title }}</h3></a>
+                                <a href="/yangilik/{{news.0.pk}}/"><h3>{{ news.0.title }}</h3></a>
                                 <p>{{ news.0.content|truncatechars:150 }}</p>
                             </div>
                         </div>
@@ -477,7 +476,7 @@
                                 <ul>
                                     <li><a href="#"><i class="fa fa-calendar"></i> {{ item.date_created|date:"d F Y" }}</a></li>
                                 </ul>
-                                <a href="/yangilik/{{item.pk}}/{{LANGUAGE_CODE}}"><h3>{{ item.title }}</h3></a>
+                                <a href="/yangilik/{{item.pk}}/"><h3>{{ item.title }}</h3></a>
                             </div>
                         </div>
                     {% endfor %}

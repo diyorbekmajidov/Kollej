@@ -230,35 +230,20 @@
         <div class="footer-top pt-40 pb-70">
             <div class="container">
                 <div class="row">
+                    <!-- Footer About -->
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="/"><img width="100px" height="200px" src="{% static 'assets/images/logo4.png' %}" alt="Logo"></a>
+                                <a href="/"><img width="150px" height="150px" src="{% static 'assets/images/logo4.png' %}" alt="Logo"></a>
                             </div>
                             <p>
-                                {% blocktranslate %}SAMARQAND QURILISH SOHASI MALAKALI MUTAXASSISLARNI TAYYORLASH MARKAZI{% endblocktranslate %}
+                                {% blocktranslate %}Samarqand shahar 3-son politexnikumi{% endblocktranslate %}
                             </p>
-                        </div> <!-- footer about -->
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-link mt-40">
-                            <div class="footer-title pb-25">
-                                <h6>{% blocktranslate %}Sayt xaritasi{% endblocktranslate %}</h6>
-                            </div>
-                            <ul>
-                                <li><a href="/"><i class="fa fa-angle-right"></i>{% blocktranslate %}Bosh sahifa{% endblocktranslate %}</a></li>
-                                <li><a href="/yangiliklar/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Yangiliklar{% endblocktranslate %}</a></li>
-                                <li><a href="/rahbariyat/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Rahbariyat{% endblocktranslate %}</a></li>
-                                <li><a href="/contact/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="/library" id="st_txt><i class="fa fa-angle-right"></i>{% blocktranslate %}Kutubxona{% endblocktranslate %}</a></li>
-                                <li><a href="/ttj/" id="st_txt"><i class="fa fa-angle-right"></i>{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a></li>
-                            </ul>
-                        </div> <!-- footer link -->
-                    </div>
-                    
-                    <div class="col-lg-3 col-md-6">
+    
+                    <!-- Footer Address -->
+                    <div class="col-lg-3 col-md-5">
                         <div class="footer-address mt-40">
                             <div class="footer-title pb-25">
                                 <h6>Bog'lanish</h6>
@@ -289,14 +274,32 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div> <!-- footer address -->
+                        </div>
+                    </div>
+    
+                    <!-- Footer Map -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer-map mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>{% blocktranslate %}Bizning manzil{% endblocktranslate %}</h6>
+                            </div>
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3247.553347563248!2d66.85247707597375!3d39.659220971571415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDM5JzMzLjIiTiA2NsKwNTEnMTguMiJF!5e1!3m2!1sen!2s!4v1736310683929!5m2!1sen!2s" 
+                                width="100%" height="250" 
+                                style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
                     </div>
                 </div> <!-- row -->
+                <hr style="background-color: white; height: 1px; border: none;">
             </div> <!-- container -->
+            <p style="color:white; font-size:12;text-align:center;">{% blocktranslate %}Barcha huquqlar himoyalangan. © 2024. Ushbu saytda chop etilgan materiallarning to'liq yoki qisman ishlatilishida va keltirilishida rasmiy sayt manzili ko'rsatilishi shart.{% endblocktranslate %}</p>
         </div> <!-- footer top -->
         
-
     </footer>
+    
+    
+    
     <script>
         function changeLanguage() {
             var selectedLanguage = document.getElementById("languageSwitcher").value;
