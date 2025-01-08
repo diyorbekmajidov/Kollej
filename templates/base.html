@@ -106,7 +106,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Logotip -->
-                    <a class="navbar-brand" href="/{{LANGUAGE_CODE}}">
+                    <a class="navbar-brand" href="/">
                         <img src="{% static 'assets/images/logo4.png' %}" alt="Logo" class="img-fluid; ml-20" style="max-height: 50px;">
                     </a>
                     <!-- Toggler button -->
@@ -118,7 +118,7 @@
                         <ul class="navbar-nav ml-40" style="font-size: 18px; font-weight: bold; text-transform: uppercase;">
                             <!-- Home -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/{{LANGUAGE_CODE}}">{% blocktranslate %}Bosh sahifa{% endblocktranslate %}</a>
+                                <a class="nav-link" href="/">{% blocktranslate %}Bosh sahifa{% endblocktranslate %}</a>
                             </li>
                             
                             <!-- Courses -->
@@ -128,7 +128,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="coursesDropdown" style="font-size: 10px; background: #f8f9fa;">
                                     <a class="dropdown-item text-center" style="font-size: 11px;" href="/library/">{% blocktranslate %}Kutubxona{% endblocktranslate %}</a>
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/ttj/{{LANGUAGE_CODE}}">{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/ttj/">{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -142,11 +142,11 @@
                             </li>
                             <!-- Teachers -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/rahbariyat/{{LANGUAGE_CODE}}">{% blocktranslate %}Rahbariyat{% endblocktranslate %}</a>
+                                <a class="nav-link" href="/rahbariyat/">{% blocktranslate %}Rahbariyat{% endblocktranslate %}</a>
                             </li>
                             <!-- Contact -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/contact/{{LANGUAGE_CODE}}">{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a>
+                                <a class="nav-link" href="/contact/">{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -163,7 +163,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="directions" style="font-size: 10px; background: #f8f9fa;">
                                     {% for d in directions %}
-                                        <a class="dropdown-item text-center" style="font-size: 11px;" href="/directions/{{d.pk}}/{{LANGUAGE_CODE}}"> {{d.name|slice:15}}... </a>
+                                        <a class="dropdown-item text-center" style="font-size: 11px;" href="/directions/{{d.pk}}/"> {{d.name|slice:15}}... </a>
                                     
                                     {% endfor %}
                                 </div>
@@ -246,14 +246,14 @@
                                 <h6>{% blocktranslate %}Sayt xaritasi{% endblocktranslate %}</h6>
                             </div>
                             <ul>
-                                <li><a href="/{{LANGUAGE_CODE}}"><i class="fa fa-angle-right"></i>{% blocktranslate %}Bosh sahifa{% endblocktranslate %}</a></li>
-                                <li><a href="/{{LANGUAGE_CODE}}/yangiliklar/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Yangiliklar{% endblocktranslate %}</a></li>
-                                <li><a href="/{{LANGUAGE_CODE}}/rahbariyat/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Rahbariyat{% endblocktranslate %}</a></li>
-                                <li><a href="/{{LANGUAGE_CODE}}/contact/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a></li>
+                                <li><a href="/"><i class="fa fa-angle-right"></i>{% blocktranslate %}Bosh sahifa{% endblocktranslate %}</a></li>
+                                <li><a href="/yangiliklar/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Yangiliklar{% endblocktranslate %}</a></li>
+                                <li><a href="/rahbariyat/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Rahbariyat{% endblocktranslate %}</a></li>
+                                <li><a href="/contact/" id='st_txt'><i class="fa fa-angle-right"></i>{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a></li>
                             </ul>
                             <ul>
                                 <li><a href="/library" id="st_txt><i class="fa fa-angle-right"></i>{% blocktranslate %}Kutubxona{% endblocktranslate %}</a></li>
-                                <li><a href="/{{LANGUAGE_CODE}}/ttj/" id="st_txt"><i class="fa fa-angle-right"></i>{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a></li>
+                                <li><a href="/ttj/" id="st_txt"><i class="fa fa-angle-right"></i>{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a></li>
                             </ul>
                         </div> <!-- footer link -->
                     </div>
