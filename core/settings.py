@@ -60,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
-CORS_ALLOWED_ORIGINS = ["http://sam3sonpolitexnikum.uz/",]
+CORS_ALLOWED_ORIGINS = ["http://sam3sonpolitexnikum.uz",]
 
 TEMPLATES = [
     {
