@@ -8,20 +8,34 @@
         <div class="row">
 
             {% for item in data %}
-                <div class="col-md-4">
-                    <div class="card" >
-                        <img src="{{item.image}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">{{item.full_name}}</h5>
-                        <p class="card-text">{{item.position}}</p>
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="row p-3">
+                          <div class="col-md-4">
+                            <img class="rounded" src="{{item.image}}" alt="" />
+                          </div>
+                          <div class="col-md-8">
+                            <h3>{{item.full_name}}</h3>
+                            <div>
+                              <span class="text-secondary">{% blocktranslate %}E-pochta: {% endblocktranslate %}</span> {{item.email}}
+                            </div>
+                            <div>
+                              <span class="text-secondary">{% blocktranslate %}Telefon raqam: {% endblocktranslate %}</span>
+                              {{item.phone_number}}
+                            </div>
+                            <div>
+                              <span class="text-secondary">{% blocktranslate %}Qabul kunlari: {% endblocktranslate %}</span>
+                              {{item.acceptions}}
+                            </div>
+                            <div>
+                                <span class="text-secondary">{% blocktranslate %}Manzil: {% endblocktranslate %}</span> {{data.adress}}
+                              </div>
+                            <div>
+                              <span class="text-secondary">{% blocktranslate %}Lavozimi: {% endblocktranslate %}</span> {{item.position}}
+                            </div>
+                          </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{% blocktranslate %}Qabul kunlari: {% endblocktranslate %}{{item.acceptions}}</li>
-                        <li class="list-group-item">{% blocktranslate %}Telefon raqam: {% endblocktranslate %}{{item.phone_number}}</li>
-                        <li class="list-group-item">{% blocktranslate %}Email: {% endblocktranslate %}{{item.email}}</li>
-                        </ul>
-                        
-                    </div>
+                      </div>
                 </div>
             {% endfor %}
         </div>

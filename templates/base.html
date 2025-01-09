@@ -2,7 +2,6 @@
 {% load static %}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,7 +105,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Logotip -->
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="/{{LANGUAGE_CODE}}/">
                         <img src="{% static 'assets/images/logo4.png' %}" alt="Logo" class="img-fluid; ml-20" style="max-height: 50px;">
                     </a>
                     <!-- Toggler button -->
@@ -118,7 +117,7 @@
                         <ul class="navbar-nav ml-40" style="font-size: 18px; font-weight: bold; text-transform: uppercase;">
                             <!-- Home -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/">{% blocktranslate %}Bosh sahifa{% endblocktranslate %}</a>
+                                <a class="nav-link" href="/{{LANGUAGE_CODE}}/">{% blocktranslate %}Bosh sahifa{% endblocktranslate %}</a>
                             </li>
                             
                             <!-- Courses -->
@@ -127,50 +126,50 @@
                                     {% blocktranslate %}Talabalar hayoti{% endblocktranslate %}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="coursesDropdown" style="font-size: 10px; background: #f8f9fa;">
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/library/">{% blocktranslate %}Kutubxona{% endblocktranslate %}</a>
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/ttj/">{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/{{LANGUAGE_CODE}}/library/">{% blocktranslate %}Kutubxona{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/{{LANGUAGE_CODE}}/ttj/">{% blocktranslate %}Yotoqxona{% endblocktranslate %}</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="/{{LANGUAGE_CODE}}/" id="coursesDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {% blocktranslate %}Yangiliklar{% endblocktranslate %}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="coursesDropdown2" style="font-size: 10px; background: #f8f9fa;">
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/yangiliklar/">{% blocktranslate %}Yangiliklar{% endblocktranslate %}</a>
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/events/">{% blocktranslate %}E'lonlar{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/{{LANGUAGE_CODE}}/yangiliklar/">{% blocktranslate %}Yangiliklar{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/{{LANGUAGE_CODE}}/events/">{% blocktranslate %}E'lonlar{% endblocktranslate %}</a>
                                 </div>
                             </li>
                             <!-- Teachers -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/rahbariyat/">{% blocktranslate %}Rahbariyat{% endblocktranslate %}</a>
+                                <a class="nav-link" href="/{{LANGUAGE_CODE}}/rahbariyat/">{% blocktranslate %}Rahbariyat{% endblocktranslate %}</a>
                             </li>
                             <!-- Contact -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/contact/">{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a>
+                                <a class="nav-link" href="/{{LANGUAGE_CODE}}/contact/">{% blocktranslate %}Bog'lanish{% endblocktranslate %}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Ochiq ma'lumotlar
+                                    {% blocktranslate %}Ochiq ma&#39;lumotlar{% endblocktranslate %}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="coursesDropdown2" style="font-size: 10px; background: #f8f9fa;">
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/opendata/">{% blocktranslate %}Ochiq ma'lumotlar{% endblocktranslate %}</a>
-                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/charter/">{% blocktranslate %}Nizom{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/{{LANGUAGE_CODE}}/opendata/">{% blocktranslate %}Ochiq ma&#39;lumotlar{% endblocktranslate %}</a>
+                                    <a class="dropdown-item text-center" style="font-size: 11px;" href="/{{LANGUAGE_CODE}}/charter/">{% blocktranslate %}Nizom{% endblocktranslate %}</a>
                                 </div>
                             </li>
                              <li class="nav-item dropdown">
-                               <a class="nav-link dropdown-toggle" href="#" id="directions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <a class="nav-link dropdown-toggle" href="/{{LANGUAGE_CODE}}/" id="directions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {% blocktranslate %}Yo'nalishlar{% endblocktranslate %}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="directions" style="font-size: 10px; background: #f8f9fa;">
                                     {% for d in directions %}
-                                        <a class="dropdown-item text-center" style="font-size: 11px;" href="/directions/{{d.pk}}/"> {{d.name|slice:15}}... </a>
+                                        <a class="dropdown-item text-center" style="font-size: 11px;" href="/{{LANGUAGE_CODE}}/directions/{{d.pk}}/"> {{d.name|slice:15}}... </a>
                                     
                                     {% endfor %}
                                 </div>
                             </li>
 
                             <li class="nav-item">
-                                <div class="topbar-right; mt-15">
+                                <div class="topbar-right mt-15">
                                     <ul>
                                         <li>
                                             <select id="languageSwitcher" class="form-control" onchange="changeLanguage()">
@@ -178,20 +177,20 @@
                                                 {% get_available_languages as LANGUAGES %}
                                                 {% get_language_info_list for LANGUAGES as languages %}
                                                 {% for lang in languages %}
-                                                {% if lang.code == "uz" %}
                                                     <option value="/{{ lang.code }}/" {% if lang.code == LANGUAGE_CODE %} selected {% endif %}>
                                                         {{ lang.name_local }} <!-- Display language name in local format -->
                                                     </option>
-                                                    {% else %}
-                                                    <option value="/{{ lang.code }}/" {% if lang.code == LANGUAGE_CODE %} selected {% endif %}>
-                                                      {{ lang.name_local }} <!-- Display language name in local format -->
-                                                  </option>
-                                                    {% endif %}
                                                 {% endfor %}
                                             </select>
+                                            
+                                            
+                                            
+                                            
+                                        </li>
                                     </ul>
-                              </div>
-                             </li>
+                                </div>
+                            </li>
+                            
                         </ul>
                     </div>
                 </nav>
@@ -298,14 +297,15 @@
         
     </footer>
     
-    
-    
     <script>
         function changeLanguage() {
             var selectedLanguage = document.getElementById("languageSwitcher").value;
             window.location.href = selectedLanguage; // Redirect to the selected language URL
         }
-     </script>
+    </script>
+    
+   
+    
 
     <script src="{% static 'assets/js/main.js' %}"></script>
     <!-- Vendor Scripts -->
@@ -328,6 +328,10 @@
     
     <!-- Main Script -->
     <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
     
     <!-- Map Script -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>

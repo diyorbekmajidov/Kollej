@@ -15,6 +15,7 @@ class Leadership(models.Model):
     full_name = models.CharField(max_length=56, verbose_name="To'liq isim")
     acceptions = models.CharField(max_length=56, verbose_name='Qabul kunlari')
     position = models.CharField(max_length=56, verbose_name='lavozim')
+    adress = models.CharField(max_length=256, verbose_name="manzil",blank=True, null=True)
     phone_number = models.CharField(max_length=26, verbose_name='Telfon raqam')
     email = models.CharField(max_length=56)
     image = models.ImageField(upload_to='img/', validators=[validate_file_size])

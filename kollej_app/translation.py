@@ -3,7 +3,7 @@ from .models import Leadership, DirectionsModel, OpenData,News, Requisites, Regu
 
 @register(Leadership)
 class LeadershipTranslationOptions(TranslationOptions):
-    fields = ('full_name', 'acceptions', 'position',)
+    fields = ('full_name', 'acceptions', 'position','adress',)
 
 @register(DirectionsModel)
 class DirectionsModelTranslationOptions(TranslationOptions):

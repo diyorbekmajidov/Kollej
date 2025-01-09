@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-07 23:19-0600\n"
+"POT-Creation-Date: 2025-01-09 15:39+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,85 +18,87 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/base.html:12 templates/base.html:241 templates/index.html:38
+#: templates/base.html:11 templates/base.html:240 templates/index.html:38
 msgid "Samarqand shahar 3-son politexnikumi"
-msgstr ""
+msgstr "Samarkand City Polytechnic No. 3"
 
-#: templates/base.html:122
+#: templates/base.html:121
 msgid "Bosh sahifa"
-msgstr ""
+msgstr "Home page"
 
-#: templates/base.html:128
+#: templates/base.html:127
 msgid "Talabalar hayoti"
-msgstr ""
+msgstr "Student life"
 
-#: templates/base.html:131 templates/library.html:17
+#: templates/base.html:130 templates/library.html:17
 msgid "Kutubxona"
-msgstr ""
+msgstr "Library"
 
-#: templates/base.html:132
+#: templates/base.html:131
 msgid "Yotoqxona"
-msgstr ""
+msgstr "Dormitory"
 
-#: templates/base.html:137 templates/base.html:140 templates/index.html:448
+#: templates/base.html:136 templates/base.html:139 templates/index.html:448
 #: templates/news.html:17
 msgid "Yangiliklar"
-msgstr ""
+msgstr "News"
 
-#: templates/base.html:141
+#: templates/base.html:140
 msgid "E'lonlar"
-msgstr ""
+msgstr "Events"
 
-#: templates/base.html:146
+#: templates/base.html:145
 msgid "Rahbariyat"
-msgstr ""
+msgstr "Leadership"
 
-#: templates/base.html:150 templates/contact.html:43
+#: templates/base.html:149 templates/contact.html:43
 msgid "Bog'lanish"
-msgstr ""
+msgstr "Connection"
 
-#: templates/base.html:157 templates/open-data.html:33
-msgid "Ochiq ma'lumotlar"
-msgstr ""
+#: templates/base.html:153 templates/base.html:156 templates/open-data.html:33
+msgid "Ochiq ma&#39;lumotlar"
+msgstr "Open data"
 
-#: templates/base.html:158 templates/charter.html:33
+#: templates/base.html:157 templates/charter.html:33
 msgid "Nizom"
-msgstr ""
+msgstr "Regulation"
 
-#: templates/base.html:163
+#: templates/base.html:162
 msgid "Yo'nalishlar"
-msgstr ""
+msgstr "Directions"
 
-#: templates/base.html:258 templates/contact.html:94
+#: templates/base.html:257 templates/contact.html:94
 msgid "Kimyogarlar\" MFY Irteshar GES ko'chasi 5-uy"
-msgstr ""
+msgstr "Chemists\" MFY Irteshar GES Street, 5"
 
-#: templates/base.html:285
+#: templates/base.html:284
 msgid "Bizning manzil"
-msgstr ""
+msgstr "Our address"
 
-#: templates/base.html:297
+#: templates/base.html:296
 msgid ""
 "Barcha huquqlar himoyalangan. © 2024. Ushbu saytda chop etilgan "
 "materiallarning to'liq yoki qisman ishlatilishida va keltirilishida rasmiy "
 "sayt manzili ko'rsatilishi shart."
 msgstr ""
+"All rights reserved. © 2024. When using and citing materials published on "
+"this site in whole or in part, the official site address must be indicated."
 
 #: templates/contact.html:44
 msgid "Aloqada bo'lish"
-msgstr ""
+msgstr "Keep in touch"
 
 #: templates/contact.html:77
 msgid "Yuborish"
-msgstr ""
+msgstr "Send"
 
 #: templates/events.html:17 templates/index.html:51
 msgid "So'nggi hodisalar"
-msgstr ""
+msgstr "Recent events"
 
 #: templates/index.html:37
 msgid "Biz haqimizda"
-msgstr ""
+msgstr "About Us"
 
 #: templates/index.html:42
 msgid ""
@@ -104,34 +106,45 @@ msgid ""
 "mutaxassislarni tayyorlash markazi ham faoliyat yuritmoqda qisqa muddatli "
 "kurs boʻlib."
 msgstr ""
+"Samarkand City Polytechnic No. 3 also operates a center for training "
+"qualified specialists in the construction industry, offering short-term "
+"courses."
 
 #: templates/index.html:62
 msgid "To'liq o'qish"
-msgstr ""
+msgstr "Full reading"
 
 #: templates/index.html:116
 msgid "Bizning yo'nalishlar"
-msgstr ""
+msgstr "Our destinations"
 
 #: templates/index.html:447
 msgid "So'nggi xabarlar"
-msgstr ""
+msgstr "Latest news"
 
 #: templates/index.html:514
 msgid "Tez-tez so'raladigan savollar"
-msgstr ""
-
-#: templates/leadership.html:19
-msgid "Qabul kunlari: "
-msgstr ""
+msgstr "Frequently Asked Questions"
 
 #: templates/leadership.html:20
-msgid "Telefon raqam: "
+msgid "E-pochta: "
 msgstr ""
 
-#: templates/leadership.html:21
-msgid "Email: "
-msgstr ""
+#: templates/leadership.html:23
+msgid "Telefon raqam: "
+msgstr "Phone number:"
+
+#: templates/leadership.html:27
+msgid "Qabul kunlari: "
+msgstr "Reception days:"
+
+#: templates/leadership.html:31
+msgid "Manzil: "
+msgstr "Adress:"
+
+#: templates/leadership.html:34
+msgid "Lavozimi: "
+msgstr "Position"
 
 #: templates/library.html:32
 msgid ""
@@ -181,10 +194,49 @@ msgid ""
 "kitob do'koni universitetdagi talabalarning umumiy ta'lim tajribasiga "
 "sezilarli hissa qo'shadi."
 msgstr ""
+"The bookstore of Samarkand City Polytechnic No. 3 is more than a place to "
+"buy books and educational materials. It also serves as a center for "
+"intellectual and cultural activities within the university community. The "
+"store frequently hosts author readings, book signings, and panel discussions "
+"on various topics related to economics, business, and literature. These "
+"events provide students, faculty, and staff with the opportunity to interact "
+"with renowned authors, experts, and industry professionals. They offer "
+"valuable insights, spark discussions, and help to deepen their understanding "
+"of the topics being studied. The bookstore's event calendar is often filled "
+"with a variety of events that cater to diverse interests and promote a "
+"vibrant academic and literary culture. In addition to physical books, the "
+"bookstore recognizes the growing importance of digital resources and offers "
+"digital subscriptions to e-books and academic journals. This allows students "
+"to access a wide range of scholarly materials from their preferred digital "
+"devices. The store provides students with guidance and assistance in setting "
+"up and using these digital resources, ensuring a seamless transition to a "
+"digital learning environment. The bookstore's commitment to providing "
+"affordable resources is evident through its textbook buyback program. At the "
+"end of each semester, students can sell their used textbooks back to the "
+"bookstore, which helps them cover part of their costs and allows prospective "
+"students to purchase second-hand books at affordable prices. This "
+"sustainable approach not only benefits individual students, but also "
+"contributes to the university's efforts to foster a culture of "
+"resourcefulness and cost-consciousness. Recognizing the importance of "
+"collaboration and cooperation, the bookstore actively works with faculty to "
+"ensure that students receive the necessary learning materials in a timely "
+"manner. This collaboration helps streamline the textbook ordering process, "
+"ensuring that students have the resources they need at the beginning of each "
+"semester. In addition, the bookstore engages in charitable initiatives to "
+"support educational initiatives in the community. It donates books, "
+"supplies, and other resources to local schools and educational "
+"organizations, increasing literacy and providing access to quality education "
+"for all. In conclusion, the Samarkand City Polytechnic No. 3 Bookstore is "
+"not just a place to buy books and educational materials. It serves as a "
+"vibrant center for intellectual exploration, hosts events, and fosters a "
+"culture of academic engagement. By providing a variety of resources, "
+"embracing digital learning, promoting affordable prices, and supporting "
+"community initiatives, the bookstore makes a significant contribution to the "
+"overall educational experience of students at the university."
 
 #: templates/ttj.html:17
 msgid "Talabalar turar joyi"
-msgstr ""
+msgstr "Student accommodation"
 
 #: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:5
 msgid "Select an image to embed"

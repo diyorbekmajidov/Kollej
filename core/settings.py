@@ -50,18 +50,17 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    "corsheaders.middleware.CorsMiddleware", #cors middleware
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.locale.LocaleMiddleware', #new
+    "corsheaders.middleware.CorsMiddleware", #cors middleware
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-LANGUAGE_COOKIE_NAME = 'django_language'
 
 ROOT_URLCONF = 'core.urls'
-# CORS_ALLOWED_ORIGINS = ["http://sam3sonpolitexnikum.uz/",]
+CORS_ALLOWED_ORIGINS = ["http://sam3sonpolitexnikum.uz/",]
 
 TEMPLATES = [
     {
@@ -87,23 +86,23 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'kollej',
-#         'USER': 'kollej3',
-#         'PASSWORD': 'royid472',
-#         'HOST': 'localhost',
-#         'PORT': '',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'kollej',
+        'USER': 'kollej3',
+        'PASSWORD': 'royid472',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 
 # Password validation
@@ -123,23 +122,48 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-from django.utils.translation import gettext_lazy as _
-LANGUAGE_CODE = 'uz'
 
-LANGUAGES = [
-    ('uz', _('Uzbek')),
-    ('en', _('English')),
-    ('ru', _('Russian')),
-]
+# from django.utils.translation import gettext_lazy as _
+# LANGUAGE_CODE = 'uz'
+
+# TIME_ZONE = 'Asia/Tashkent'
+# USE_I18N = True
+# USE_TZ = True
+# LANGUAGES = [
+#     ('uz', _('Uzbek')),
+#     ('en', _('English')),
+#     ('ru', _('Russian')),
+# ]
 
 
-LOCALE_PATHS = [
+# LOCALE_PATHS = [
+#     os.path.join(BASE_DIR, 'locale'),
+# ]
+
+
+LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
-]
+)
+
+LANGUAGE_CODE = 'uz'
+TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
+
 USE_L10N = True
+
 USE_TZ = True
+
+
+
+gettext = lambda s: s
+LANGUAGES = (
+    ('uz',  gettext('Uzbek')),
+    ('ru',  gettext('Russian')),
+    ('en',  gettext('English')),
+    
+)
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

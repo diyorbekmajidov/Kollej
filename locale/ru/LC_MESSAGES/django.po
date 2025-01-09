@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-07 23:19-0600\n"
+"POT-Creation-Date: 2025-01-09 15:04+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,85 +20,89 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: templates/base.html:12 templates/base.html:241 templates/index.html:38
+#: templates/base.html:11 templates/base.html:240 templates/index.html:38
 msgid "Samarqand shahar 3-son politexnikumi"
-msgstr ""
+msgstr "Самаркандский городской политехнический институт №3"
 
-#: templates/base.html:122
+#: templates/base.html:121
 msgid "Bosh sahifa"
-msgstr ""
+msgstr "Домашняя страница"
 
-#: templates/base.html:128
+#: templates/base.html:127
 msgid "Talabalar hayoti"
-msgstr ""
+msgstr "Студенческая жизнь"
 
-#: templates/base.html:131 templates/library.html:17
+#: templates/base.html:130 templates/library.html:17
 msgid "Kutubxona"
-msgstr ""
+msgstr "Библиотека"
 
-#: templates/base.html:132
+#: templates/base.html:131
 msgid "Yotoqxona"
-msgstr ""
+msgstr "Общежитие"
 
-#: templates/base.html:137 templates/base.html:140 templates/index.html:448
+#: templates/base.html:136 templates/base.html:139 templates/index.html:448
 #: templates/news.html:17
 msgid "Yangiliklar"
-msgstr ""
+msgstr "Новости"
 
-#: templates/base.html:141
+#: templates/base.html:140
 msgid "E'lonlar"
-msgstr ""
+msgstr "Объявления"
 
-#: templates/base.html:146
+#: templates/base.html:145
 msgid "Rahbariyat"
-msgstr ""
+msgstr "Лидерство"
 
-#: templates/base.html:150 templates/contact.html:43
+#: templates/base.html:149 templates/contact.html:43
 msgid "Bog'lanish"
-msgstr ""
+msgstr "Связь"
 
-#: templates/base.html:157 templates/open-data.html:33
-msgid "Ochiq ma'lumotlar"
-msgstr ""
+#: templates/base.html:156 templates/open-data.html:33
+msgid "Ochiq ma&#39;lumotlar"
+msgstr "Открытые данные"
 
-#: templates/base.html:158 templates/charter.html:33
+#: templates/base.html:157 templates/charter.html:33
 msgid "Nizom"
-msgstr ""
+msgstr "Регулирование"
 
-#: templates/base.html:163
+#: templates/base.html:162
 msgid "Yo'nalishlar"
-msgstr ""
+msgstr "Направления"
 
-#: templates/base.html:258 templates/contact.html:94
+#: templates/base.html:257 templates/contact.html:94
 msgid "Kimyogarlar\" MFY Irteshar GES ko'chasi 5-uy"
-msgstr ""
+msgstr "Химики\" МФЮ Иртешар ГЭС ул., 5"
 
-#: templates/base.html:285
+#: templates/base.html:284
 msgid "Bizning manzil"
-msgstr ""
+msgstr "Наш адрес"
 
-#: templates/base.html:297
+#: templates/base.html:296
 msgid ""
 "Barcha huquqlar himoyalangan. © 2024. Ushbu saytda chop etilgan "
 "materiallarning to'liq yoki qisman ishlatilishida va keltirilishida rasmiy "
 "sayt manzili ko'rsatilishi shart."
 msgstr ""
+"Все права защищены. © 2024. Опубликовано на этом сайте "
+"официальный при использовании и цитировании материалов полностью или частично "
+"адрес сайта обязателен."
+
 
 #: templates/contact.html:44
 msgid "Aloqada bo'lish"
-msgstr ""
+msgstr "Поддерживать связь"
 
 #: templates/contact.html:77
 msgid "Yuborish"
-msgstr ""
+msgstr "Отправлять"
 
 #: templates/events.html:17 templates/index.html:51
 msgid "So'nggi hodisalar"
-msgstr ""
+msgstr "Недавние события"
 
 #: templates/index.html:37
 msgid "Biz haqimizda"
-msgstr ""
+msgstr "о нас"
 
 #: templates/index.html:42
 msgid ""
@@ -106,34 +110,45 @@ msgid ""
 "mutaxassislarni tayyorlash markazi ham faoliyat yuritmoqda qisqa muddatli "
 "kurs boʻlib."
 msgstr ""
+"Самаркандский городской политехнический институт № 3, специальность "
+"Строительство Центр подготовки специалистов также будет работать в течение "
+"короткого периода времени. Это курс."
 
 #: templates/index.html:62
 msgid "To'liq o'qish"
-msgstr ""
+msgstr "Полное чтение"
 
 #: templates/index.html:116
 msgid "Bizning yo'nalishlar"
-msgstr ""
+msgstr "Наши направления"
 
 #: templates/index.html:447
 msgid "So'nggi xabarlar"
-msgstr ""
+msgstr "Последние новости"
 
 #: templates/index.html:514
 msgid "Tez-tez so'raladigan savollar"
-msgstr ""
-
-#: templates/leadership.html:19
-msgid "Qabul kunlari: "
-msgstr ""
+msgstr "Часто задаваемые вопросы"
 
 #: templates/leadership.html:20
-msgid "Telefon raqam: "
-msgstr ""
+msgid "E-pochta: "
+msgstr "Электронная почта:"
 
-#: templates/leadership.html:21
-msgid "Email: "
-msgstr ""
+#: templates/leadership.html:23
+msgid "Telefon raqam: "
+msgstr "Номер телефона:"
+
+#: templates/leadership.html:27
+msgid "Qabul kunlari: "
+msgstr "Дни приема:"
+
+#: templates/leadership.html:31
+msgid "Manzil: "
+msgstr "Адрес:"
+
+#: templates/leadership.html:34
+msgid "Lavozimi: "
+msgstr "Позиция:"
 
 #: templates/library.html:32
 msgid ""
@@ -183,10 +198,46 @@ msgid ""
 "kitob do'koni universitetdagi talabalarning umumiy ta'lim tajribasiga "
 "sezilarli hissa qo'shadi."
 msgstr ""
+"Самаркандский городской политехнический институт № 3 книжный магазин книги и учебные "
+"материалы, помимо того, что это место, где можно их купить. Он также "
+"является центром интеллектуальной и культурной деятельности университетского "
+"сообщества. В магазине часто проводятся авторские чтения, автограф-сессии и "
+"панельные дискуссии на темы, связанные с экономикой, бизнесом и литературой. "
+"Эти мероприятия позволяют студентам, преподавателям и сотрудникам "
+"взаимодействовать с известными авторами, экспертами и профессионалами отрасли. "
+"Они предоставляют ценную информацию, вызывают дискуссии и помогают глубже понять "
+"изучаемые темы. Календарь мероприятий книжного магазина часто заполнен событиями, "
+"которые удовлетворяют различные интересы и способствуют продвижению академической и "
+"литературной культуры. Помимо физических книг, книжный магазин признает растущее "
+"значение цифровых ресурсов и предлагает цифровые подписки на электронные книги и "
+"академические журналы. Это позволяет студентам получать доступ к широкому спектру "
+"научных материалов с их предпочтительных цифровых устройств. Магазин предоставляет "
+"руководства и помощь по установке и использованию этих цифровых ресурсов, что "
+"обеспечивает плавный переход к цифровой учебной среде. Стремление книжного магазина "
+"обеспечивать доступность ресурсов очевидно в программе обратного выкупа учебников. "
+"Каждый семестр студенты могут вернуть использованные учебники в магазин, что помогает "
+"им частично компенсировать расходы и предоставляет будущим студентам возможность "
+"приобретать подержанные книги по доступным ценам. Такой устойчивый подход приносит "
+"пользу не только отдельным студентам, но и способствует усилиям университета по "
+"развитию культуры изобретательности и осознания затрат. Осознавая важность сотрудничества, "
+"книжный магазин активно работает с преподавателями, чтобы обеспечить своевременную "
+"доставку необходимых учебных материалов студентам. Это сотрудничество упрощает процесс "
+"получения учебников, гарантируя, что студенты имеют необходимые ресурсы в начале каждого "
+"семестра. Кроме того, книжный магазин занимается благотворительными инициативами, поддерживая "
+"образовательные проекты в обществе. Он дарит книги, канцелярские принадлежности и другие "
+"ресурсы местным школам и образовательным организациям, способствуя повышению грамотности и "
+"обеспечивая доступ к качественному образованию для всех. В заключение, книжный магазин "
+"Самаркандского городского политехнического института № 3 - это не просто место для "
+"покупки книг и учебных материалов. Он служит центром интеллектуальной деятельности, проводит "
+"мероприятия и способствует развитию культуры академической активности. Путем предоставления "
+"разнообразных ресурсов, продвижения цифрового обучения, поощрения доступных цен и поддержки "
+"общественных инициатив, книжный магазин вносит значительный вклад в общее образовательное "
+"развитие студентов университета."
+
 
 #: templates/ttj.html:17
 msgid "Talabalar turar joyi"
-msgstr ""
+msgstr "Студенческое общежитие"
 
 #: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:5
 msgid "Select an image to embed"

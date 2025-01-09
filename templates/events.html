@@ -44,7 +44,7 @@
                                 <img src="/media/{{obj.image}}" alt="Blog">
                             </div>
                             <div class="blog-cont">
-                                <a href="/yangilik/{{obj.pk}}/"><h3> {{obj.title}}</h3></a>
+                                <a href="/{{LANGUAGE_CODE}}/yangilik/{{obj.pk}}/"><h3> {{obj.title}}</h3></a>
                                 <ul>
                                     <li class="text-secondary"><i class="fa fa-eye "></i> {{obj.views}}</li>
                                     <li class="text-secondary"><i class="fa fa-clock-o "></i> {{obj.date_created|date:"d F Y" }}</li>
