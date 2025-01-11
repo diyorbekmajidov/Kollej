@@ -169,7 +169,7 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]  
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # For media files (for CKEditor image uploads)
