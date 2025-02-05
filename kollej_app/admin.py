@@ -20,6 +20,10 @@ class DirectionsAdmin(TranslationAdmin):
 class NewsAdmin(TranslationAdmin):
     list_display = ('title',)
 
+@admin.register(Vedio_New)
+class VideoNewAdmin(TranslationAdmin):
+    list_display = ('title',)
+
 @admin.register(OpenData)
 class OpenDataAdmin(TranslationAdmin):
     list_display = ('name',)

@@ -32,3 +32,8 @@ class PetitionSerializers(serializers.ModelSerializer):
     class Meta:
         model = Petitions
         fields = "__all__"
+
+class VedioNewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Vedio_New 
+        fields = '__all__' 

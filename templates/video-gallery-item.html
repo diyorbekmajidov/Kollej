@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <!-- Asosiy video qismi -->
+        <div class="col-md-8">
+            <h2 class="mb-3">{{ vedio_news.title }}</h2>
+            
+            <!-- Video iframe -->
+            <div class="video-container">
+                {% with vedio_news.video|cut:"https://youtu.be/" as video_id %}
+                    <iframe width="560" height="315" 
+                            src="https://www.youtube.com/embed/{{ video_id }}" 
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+                {% endwith %}
+
+
+
+            </div>
+
+            <!-- Video ma'lumotlari -->
+            <p class="text-muted mt-2">
+                📅 {{ vedio_news.date }} | 👁 {{ vedio_news.views }} views
+            </p>
+            
+            <!-- Video tavsifi -->
+            <p>{{ vedio_news.description }}</p>
+        </div>
+
+        <!-- Oxirgi videolar paneli -->
+        <div class="col-md-4">
+            <h4>Oxirgi videolar</h4>
+            {% for video in latest_videos %}
+                <div class="latest-video-item mb-3">
+                    <a href="{% url 'video_detail' video.id %}">
+                        <img src="{{ video.thumbnail.url }}" class="img-fluid rounded" alt="{{ video.title }}">
+                        <p class="mt-1">{{ video.title }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 format */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .latest-video-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .latest-video-item p {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        color: #007bff;
+    }
+
+    .latest-video-item p:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}

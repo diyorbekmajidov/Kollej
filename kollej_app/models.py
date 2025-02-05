@@ -42,11 +42,7 @@ class News(models.Model):
     image = models.ImageField(upload_to='img/', validators=[validate_file_size])
     body          = RichTextUploadingField(verbose_name='Yangilik matni')
     views         = models.IntegerField(default=0, verbose_name="ko'rishlar soni")
-    title         = models.CharField(max_length=255, verbose_name="Sarlavha")
-    # def __str__(self):
-    #     return self.image
-    
-
+    title         = models.CharField(max_length=255, verbose_name="Sarlavha")    
 
     date_created = models.DateField(auto_now_add=True)
     date_update   = models.DateField(auto_now=True)
@@ -56,6 +52,20 @@ class News(models.Model):
     class Meta:
         verbose_name = "Yangiliklar va e'lonlar"
     
+
+class Vedio_New(models.Model):
+    title         = models.CharField(max_length=255, verbose_name='sarlavha')
+    vedio         = models.CharField(max_length = 10055)
+    body          = models.ImageField(upload_to='img/', verbose_name='matn tanasi') 
+    views         = models.IntegerField(default=0, verbose_name="ko'rishlar soni")
+    date_created  = models.DateField(auto_now_add=True)
+    date_update   = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Video Yangiliklar"
+    
+    def __str__(self):
+        return self.title    
 
 class Requisites(models.Model):
     college_name = models.CharField(max_length=100, verbose_name="kollej nomi")

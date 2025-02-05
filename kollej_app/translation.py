@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Leadership, DirectionsModel, OpenData,News, Requisites, RegularlyQuestion
+from .models import Leadership, DirectionsModel, OpenData,News, Requisites, RegularlyQuestion, Vedio_New
 
 @register(Leadership)
 class LeadershipTranslationOptions(TranslationOptions):
@@ -24,3 +24,7 @@ class RequisitesTranslationOptions(TranslationOptions):
 @register(RegularlyQuestion)
 class RegularlyQuestionTranslationOptions(TranslationOptions):
     fields = ('question','answer')
+
+@register(Vedio_New)
+class VedioNewTranslationOptions(TranslationOptions):
+    fields =('title',)

@@ -4,7 +4,7 @@ from .views import (Index,
              NewsView, EventView, NewById,
             Directions, Requisitesview,LibraryViews, 
             TtjViews,Leadershipview,Opendata,
-            Charter,DocumetById,PetitionsView, test_language_view
+            Charter,DocumetById,PetitionsView, test_language_view, VedioNewsView
             )
 from django.conf import settings
 from django.conf.urls.static import static
@@ -14,6 +14,8 @@ urlpatterns = [
     path('yangiliklar/', NewsView, name='news_list'),
     path('events/', EventView, name='events_list'),
     path('yangilik/<int:pk>/', NewById, name='news_by_id'),
+    path('video-gallery/', VedioNewsView.as_view()),
+    path('video-gallery/<int:pk>/', VedioNewsView.as_view()),
     path('directions/<int:pk>/', Directions, name="directions_list"),
     path('contact/', Requisitesview.as_view()),
     path('library/', LibraryViews.as_view(), name='libary'),

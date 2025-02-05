@@ -65,6 +65,41 @@ def NewById(request, pk):
     context = {"newsbyid":newsbyid}
     return render(request, 'news-single.html', context)
 
+
+class VedioNewsView(TemplateView):
+    def get(self, request, pk=None):
+        if pk is not None:
+            try:
+                video = Vedio_New.objects.get(id=pk)
+                views = video.views+1
+                video.views = views
+                video.save()
+                lastest = Vedio_New.objects.order_by("-id")[:5]
+                lastest_serializer = VedioNewSerializer(lastest, many=True)
+
+                print("VIDEO:", video)
+                print("LASTEST:", lastest_serializer.data)
+                return render(
+                    request,
+                    'video-gallery-item.html', 
+                    {
+                        "vedio_news":video,
+                        "lastest":lastest_serializer.data
+                    }
+                )
+            except Exception as e:
+                print(e)
+                return render(request,'video-gallery-item.html') 
+
+        try:
+            vedio_news = Vedio_New.objects.all().order_by("date_created")[::-1]
+            page = Paginator(vedio_news, 9)
+            page_num = int(request.GET.get('page', 1))
+            return render(request,'video-gallery.html', {"page_obj":page.page(page_num)})
+        except Exception as e:
+            print(e)
+            return render(request,'video-gallery.html')
+
 def Opendata(request):
     open_data = OpenData.objects.filter(open_method = 1)
     context = {"open_data":open_data}
